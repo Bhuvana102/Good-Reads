@@ -9,7 +9,7 @@ What things you need to install the software and how to install them
 
 # Name & Github Name
 
-1. Manish Kumar
-2. Srikar Kantamani
+1. Manish Kumar 
+2. Srikar Chowdary Kantamani
 3. Bhuvana Venkatesh
 4. Vaishali Unnikrishnan Latha
