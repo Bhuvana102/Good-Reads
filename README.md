@@ -15,4 +15,4 @@ What things you need to install the software and how to install them
 4. Vaishali Unnikrishnan Latha
 
 # Technologies Involved
-Front End: Angular 2. Back End: Golang
+Front End: Angular 12. Back End: Golang
