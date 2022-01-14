@@ -1,5 +1,5 @@
 # IBDB-Reviews
-This is the course project for CEN5035 aim to create a simple version of International Book Database. This project will create a web application with basic IMDB function including: Login, Signup, Show book reviews, etc.
+This is the course project for CEN5035 aim to create a simple version of Good Reads. This project will create a web application with basic Good Reads function including: Login, Signup, Show book reviews, etc.
 
 # Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
