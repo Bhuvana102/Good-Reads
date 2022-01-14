@@ -13,3 +13,6 @@ What things you need to install the software and how to install them
 2. Srikar Chowdary Kantamani
 3. Bhuvana Venkatesh
 4. Vaishali Unnikrishnan Latha
+
+# Technologies Involved
+Front End: Angular 2, CSS, HTML. Back End: Node.js, Express Framework. Database: MongoDB.
