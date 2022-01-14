@@ -1,4 +1,4 @@
-# IBDB-Reviews
+# Good-Reads
 This is the course project for CEN5035 aim to create a simple version of Good Reads. This project will create a web application with basic Good Reads function including: Login, Signup, Show book reviews, etc.
 
 # Getting Started
