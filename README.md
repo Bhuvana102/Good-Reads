@@ -1,18 +1,18 @@
 # Good-Reads
 For this project, we will be creating a web application for all the bibliophiles out there, that concentrates on implementing certain features available in the site GoodReads like login, reviewing books, adding books and categorizing books.
 
-# Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+#Goal
+  To create an application for users to search books, find reviews and comments. Users can also review rate and comment their views against the respective book.
 
-# Prerequisites
-What things you need to install the software and how to install them
+# Team
+  1. Manish Kumar Reddy Gangula
+  2. Srikar Chowdary Kantamani
+  3. Bhuvana Venkatesh
+  4. Vaishali Unnikrishnan Latha
 
-# Name & Github Name
-
-1. Manish Kumar Reddy Gangula
-2. Srikar Chowdary Kantamani
-3. Bhuvana Venkatesh
-4. Vaishali Unnikrishnan Latha
-
-# Technologies Involved
-Front End: Angular 12. Back End: Golang
+# Technology Stack 
+  1. Angular 12
+  2. Angular Material
+  3. NodeJs 
+  4. Typescript
+  5. Golang
