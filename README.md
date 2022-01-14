@@ -1,1 +1,1 @@
-# IBDB-Reviews-International-Book-Database-
+# IBDB-Reviews
