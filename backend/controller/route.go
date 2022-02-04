@@ -4,5 +4,6 @@ import "github.com/gorilla/mux"
 
 func Starter() *mux.Router {
 	r := mux.NewRouter()
-	return r
+	subRoute := r.PathPrefix("/backend").Subrouter()
+	return subRoute
 }
