@@ -22,6 +22,7 @@ import { MatListModule } from '@angular/material/list'
 import { MatTabsModule } from '@angular/material/tabs';
 import { CommunityComponent } from './community/community.component';
 import { HomepageComponent } from './homepage/homepage.component'
+import { CarouselModule } from 'ngx-owl-carousel-o';
  @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,8 @@ import { HomepageComponent } from './homepage/homepage.component'
     MatTreeModule,
     HttpClientModule,
     MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    CarouselModule,
   ],
   exports: [ MatNativeDateModule,
     MatInputModule,
@@ -63,7 +65,7 @@ import { HomepageComponent } from './homepage/homepage.component'
     MatTreeModule,
     HttpClientModule,
     MatListModule,
-    MatTabsModule],
+    MatTabsModule,],
   providers: [],
   bootstrap: [AppComponent]
 })
