@@ -12,6 +12,9 @@ func Starter() *mux.Router {
 
 	subRoute.HandleFunc("/getGenres/{id}", GetGenreForIDHandler())
 	subRoute.HandleFunc("/getGenres", GetGenresHandler())
+  
+  subRoute.HandleFunc("/fetchGenreBooks", FetchGenreBooksHandler())
+
 
 	return subRoute
 }
