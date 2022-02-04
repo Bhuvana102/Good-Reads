@@ -5,8 +5,6 @@ import (
 	"good-reads/controller"
 	"good-reads/model"
 
-	"github.com/gorilla/mux"
-
 	"net/http"
 )
 
@@ -14,7 +12,7 @@ func main() {
 
 	model.Connect()
 	fmt.Println("Connected to database")
-	r := mux.NewRouter()
+	r := controller.Starter()
 
 	controller.ApiHandler(r)
 
