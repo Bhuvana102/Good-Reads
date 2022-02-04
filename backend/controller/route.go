@@ -25,6 +25,7 @@ func ApiHandler(r *mux.Router) {
 
 		body := model.FetchGenre(key)
 
+		w.Header().Set("content-type", "application/json")
 		w.Write(body)
 
 	})
