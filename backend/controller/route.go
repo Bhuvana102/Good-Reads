@@ -13,6 +13,7 @@ func Starter() *mux.Router {
 	r := mux.NewRouter()
 	subRoute := r.PathPrefix("/api").Subrouter()
 	subRoute.HandleFunc("/insertBook", InsertBookHandler())
+	subRoute.HandleFunc("/fetchGenreBooks", FetchGenreBooksHandler())
 	return subRoute
 }
 
