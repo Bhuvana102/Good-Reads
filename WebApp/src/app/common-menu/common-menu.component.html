@@ -19,9 +19,11 @@
             <mat-icon>menu_book</mat-icon>
             <span>My Books</span>
         </button>
-        <mat-list-item [matMenuTriggerFor]="genresMenu">
-            <mat-icon>pageview</mat-icon>
-            <span>Browse</span>
+        <mat-list-item [matMenuTriggerFor]="genresMenu" style="padding: 0px; margin: 0px;">
+            <button mat-button>
+                <mat-icon>pageview</mat-icon>
+                <span>Browse</span>
+            </button>
         </mat-list-item>
         <mat-menu #genresMenu="matMenu">
                 <button mat-menu-item *ngFor="let genre of genres" (click)="goToGenre(genre.Name)">{{genre.Description}}</button>
