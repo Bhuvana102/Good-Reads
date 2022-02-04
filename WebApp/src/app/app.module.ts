@@ -15,12 +15,14 @@ import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatIconModule} from '@angular/material/icon'
 import {MatSidenavModule} from '@angular/material/sidenav'
 import {MatButtonModule} from '@angular/material/button'
-import {MatDividerModule} from '@angular/material/divider'
+import {MatDividerModule} from '@angular/material/divider';
+import { HorrorComponent } from './horror/horror.component'
  @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    LoginComponent
+    LoginComponent,
+    HorrorComponent
   ],
   imports: [
     BrowserModule,

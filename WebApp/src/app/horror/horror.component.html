@@ -1,0 +1,15 @@
+<h3>HORROR</h3>
+<p>Horror fiction is fiction in any medium intended to scare, unsettle, or horrify the audience. Historically, the cause
+    of the "horror" experience has often been the intrusion of a supernatural element into everyday human experience.
+    Since the 1960s, any work of fiction with a morbid, gruesome, surreal, or exceptionally suspenseful or frightening
+    theme has come to be called "horror". Horror fiction often overlaps science fiction or fantasy, all three of which
+    categories are sometimes placed under the umbrella classification speculative fiction. </p>
+<div class="wrapper">
+    <div *ngFor="let book of books">
+        <!--<span>{{book.name}}</span>-->
+        <img [src]="'/assets/images/'+book.img" [alt]="book.name+' not found ' " (click)="showDescription(book.name)"
+            [class.selected]="book.name===selectedbook">
+    </div>
+</div>
+<hr>
+<p>{{description}}</p>

@@ -9,11 +9,14 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'goodReads';
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
     console.log('app entered');
   }
 
   ngOnInit(): void {
     // this.router.navigate(['login']);
+  }
+  navigateTo(url: string) {
+    this.router.navigateByUrl(url);
   }
 }
