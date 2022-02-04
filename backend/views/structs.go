@@ -9,8 +9,6 @@ type Genres struct {
 	Name        string `JSON:"name"`
 	Description string `JSON:"description"`
 	Count       int    `JSON:"count"`
-	CreatedAt   time.Time
-	UpdatedAt   time.Time
 }
 
 type Book struct {
