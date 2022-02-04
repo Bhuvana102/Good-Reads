@@ -23,13 +23,15 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CommunityComponent } from './community/community.component';
 import { HomepageComponent } from './homepage/homepage.component'
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { GenreBooksComponent } from './genre-books/genre-books.component';
  @NgModule({
   declarations: [
     AppComponent,
     CommonMenuComponent,
     LoginComponent,
     CommunityComponent,
-    HomepageComponent
+    HomepageComponent,
+    GenreBooksComponent
   ],
   imports: [
     CommonModule,

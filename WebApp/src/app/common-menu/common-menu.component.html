@@ -26,7 +26,7 @@
             </button>
         </mat-list-item>
         <mat-menu #genresMenu="matMenu">
-                <button mat-menu-item *ngFor="let genre of genres" (click)="goToGenre(genre.Name)">{{genre.Description}}</button>
+                <button mat-menu-item *ngFor="let genre of genres" (click)="goToGenre(genre.Id)">{{genre.Description}}</button>
         </mat-menu>
         <mat-divider></mat-divider>
         <button mat-button class="menu-items" (click)="goToCommunity()">
@@ -40,6 +40,9 @@
         </div>
         <div class="content" *ngIf="this.global.activePage==='community'">
             <app-community></app-community>
+        </div>
+        <div class="content" *ngIf="this.global.activePage==='genre'">
+            <app-genre-books></app-genre-books>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
