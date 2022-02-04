@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppService } from '../services/app.service';
+import { AppService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
 
 @Component({
