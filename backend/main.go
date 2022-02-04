@@ -8,6 +8,8 @@ import (
 func main() {
 
 	model.Connect()
-	// defer db.Close
 	fmt.Println("Connected to database")
+	model.FetchGenres()
+	// defer db.Close
+
 }
