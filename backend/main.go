@@ -14,8 +14,6 @@ func main() {
 	fmt.Println("Connected to database")
 	r := controller.Starter()
 
-	controller.ApiHandler(r)
-
 	fmt.Println("Server started")
 	http.ListenAndServe("localhost:8080", r)
 }
