@@ -16,3 +16,21 @@ For this project, we will be creating a web application for all the bibliophiles
   3. NodeJs 
   4. Typescript
   5. Golang
+
+# Tools used
+This project was generated with Angular Material for FrontEnd and Golang for backend
+
+# Quick start
+Run the below commands to setup the node modules
+npm install && ng build 
+
+# Development server
+Run the below commands to start the development server.
+cd WebApp
+ng serve
+cd ../backend
+go run main.go 
+Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+
+

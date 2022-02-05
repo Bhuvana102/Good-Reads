@@ -2,19 +2,25 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HorrorComponent } from './horror/horror.component';
+import { CommunityComponent } from './community/community.component';
+import { CommonMenuComponent } from './common-menu/common-menu.component';
 import { LoginComponent } from './login/login.component';
+import { GenreBooksComponent } from './genre-books/genre-books.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomepageComponent },
   {
-    path: 'genre',
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
     children: [
+      { path: 'login', component: LoginComponent},
+      { path: 'home', component: CommonMenuComponent},
       { path: 'horror', component: HorrorComponent },
-      {
-        path: '**', redirectTo: 'horror', pathMatch: 'full'
-      }
+      { path: 'community', component: CommunityComponent},
+      { path:'genre/:id',component:GenreBooksComponent}
     ]
   }
 ];

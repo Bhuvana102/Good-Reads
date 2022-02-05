@@ -1,0 +1,136 @@
+mat-toolbar {
+    background: #7a18a7;
+    color: #FFFFFF;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #92a3b8;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: left;
+}
+
+.side-menu-icon{
+    position:absolute;
+    right: 20px;
+}
+
+.content {
+    height: calc(100vh - 98px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: lightgray;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+.menu-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    mat-icon {
+        margin-right: 10px;
+    }
+}
+
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name {
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+.designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+}
+
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+// Start to hover
+
+.cl-menu{
+    list-style:none outside none;
+    display:inline-table;
+    position:relative;
+    width:100%;
+    background-color: transparent;
+}
+.cl-menu li{
+    list-style:none outside none;
+    border-bottom:1px solid #cccccc;
+    padding:5px 1px;
+    text-align:center;  
+
+}
+.cl-menu>li:hover{
+    background-color:#303030;
+    background-color:#66819C;
+    color:#FFF;
+    font-weight:bold;
+    text-decoration:underline;
+    opacity:1;
+}
+
+.cl-menu li ul{
+    display:none;
+    position:absolute;
+    right:20%;
+}
+
+.cl-menu li:hover ul{
+    display:block;
+    opacity:0.8;
+    background-color:#FFF;
+    margin-top:4px;
+    font-weight:normal !important;
+}
+
+.cl-menu li ul li{
+    border-bottom:1px solid #cccccc !important;
+    border-top:none !important;
+    border-left:none !important;
+    border-right:none !important;
+}
+
+.cl-menu li ul li a{
+    color:#000;
+    text-decoration:none;
+}
+
+.cl-menu li ul li a:hover{
+    color:#390;
+    text-decoration:underline;
+}
+
+.cl-menu ul:after{
+    content:"";
+    clear:both;
+    display:block;
+}

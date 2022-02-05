@@ -1,74 +1,9 @@
-mat-toolbar {
-    background: #7a18a7;
-    color: #FFFFFF;
+.promoImg{
+    width: fit-content;
+    height: fit-content;
 }
 
-mat-sidenav {
-    margin: 16px;
-    width: 200px;
-    border-right: none;
-    background: #92a3b8;
-    color: white;
-    border-radius: 10px;
-    padding: 16px;
-    text-align: center;
-}
-
-.side-menu-icon{
-    position:absolute;
-    right: 20px;
-}
-
-.content {
-    height: calc(100vh - 98px);
-    border-radius: 10px;
-    margin: 16px;
-    margin-left: 32px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 2rem;
-    color: lightgray;
-}
-
-mat-sidenav-container {
-    height: calc(100vh - 65px);
-}
-
-.menu-items {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 1rem;
-    margin-bottom: 25px;
-    mat-icon {
-        margin-right: 10px;
-    }
-}
-
-.avatar {
-    margin-top: 16px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.name {
-    margin-top: 8px;
-    font-weight: normal;
-}
-
-.designation {
-    margin-top: 2px;
-    font-size: 0.7rem;
-    color: lightgrey;
-}
-
-mat-divider {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    background-color: rgba(255, 255, 255, 0.5);
+ng-template{
+    height: fit-content;
+    width: fit-content;
 }
