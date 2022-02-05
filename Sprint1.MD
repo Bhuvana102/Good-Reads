@@ -76,8 +76,8 @@ Sample API usage via POSTMAN
  4. Browse Menu Item
  5. Details of Books
  
- ## 1. Login Page Basic Template
- ###  https://localhost:4200/login
+## 1. Login Page Basic Template
+###  https://localhost:4200/login
 This is a basic non-functional and a design oriented login screen implemented to maintain the continuity of the Web Application. User as of Sprint 1 can click on login to enter the Web App.
 
 
@@ -92,8 +92,8 @@ This is a basic non-functional and a design oriented login screen implemented to
 
 
 
- ## 2. Landing Homepage
- ###  https://localhost:4200/home
+## 2. Landing Homepage
+###  https://localhost:4200/home
 The Home Page is the first page post login to Good Reads, and contains basic promotion and interactive content for the users in the form of a carousel and auto slide items. This page can also be accessed from the top right hamburger menu and clicking on Home.
 
 
@@ -101,7 +101,7 @@ The Home Page is the first page post login to Good Reads, and contains basic pro
 
 
 
- ## 3. Top and Side Menu Bar
+## 3. Top and Side Menu Bar
 Good Reads is equipped with a top menu bar which is embedded with a hamburger menu icon. A click event on the icon pops a floating Side Draw menu bar holding the key functionalities of Good Reads.
 
 
@@ -115,7 +115,7 @@ Good Reads is equipped with a top menu bar which is embedded with a hamburger me
 
 
 
-  ## 4. Browse Menu Item
+## 4. Browse Menu Item
 Browse option is one of the key functions of Good Reads and it enables users to select the Genre of Books which they are looking for. User can select a genre from the provided list, which redirects to the description screen.
 
 
@@ -127,7 +127,7 @@ Browse option is one of the key functions of Good Reads and it enables users to 
 ![Browse Menu Option](https://user-images.githubusercontent.com/41356950/152629224-fd97d02d-56d4-4c29-8368-3813e164327d.gif)
 
 
-  ## 5. Details of Books
+## 5. Details of Books
   ###  https://localhost:4200/genre/{Selected Book ID}
 As the user selects a genre from browse side menu option, the details of the genre are fetched from the backend. We also fetch the books that fall under that particular genre and display the cover pages of the books.
 
@@ -135,7 +135,6 @@ As the user selects a genre from browse side menu option, the details of the gen
 
 
 ### Description Demo
-
 ![Genre Description](https://user-images.githubusercontent.com/41356950/152629213-4a841837-24c3-44ca-9e2b-e21b7361b9da.gif)
 
 
