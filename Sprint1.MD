@@ -16,7 +16,8 @@ Run the below commands to start the development server.
 Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 # Sprint 1 Demo Run
-https://github.com/Bhuvana102/Good-Reads/blob/95bb48f4dd2390df0c1cbfb832518f0c64d812db/Wiki-Images/Sprint1%20Project%20Run-Initial.mp4
+![Browse Menu Option](https://user-images.githubusercontent.com/41356950/152629255-c60c4bdb-f08c-4f5b-9970-77ff2f512224.gif)
+
 
 # Backend
 API :: 
@@ -81,6 +82,11 @@ This is a basic non-functional and a design oriented login screen implemented to
 
 
 ![loginPage](https://user-images.githubusercontent.com/41356950/152628108-728afaa1-7823-4af3-9369-05fef03aecad.png)
+
+
+### Login Demo
+
+![LoginScreen](https://user-images.githubusercontent.com/41356950/152629261-abe161e9-cf7b-4027-b8fe-863b2a99df22.gif)
 
 
 
