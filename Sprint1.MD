@@ -137,10 +137,6 @@ Browse option is one of the key functions of Good Reads and it enables users to 
 ![Toolbar and Menu](https://user-images.githubusercontent.com/41356950/152629395-5dcb8da9-a5c1-483a-a361-2136867a4f69.gif)
 
 
-### Browse Menu Demo
-
-![Browse Menu Option](https://user-images.githubusercontent.com/41356950/152629224-fd97d02d-56d4-4c29-8368-3813e164327d.gif)
-
 
 ## 5. Details of Books
   ###  https://localhost:4200/genre/{Selected Book ID}
