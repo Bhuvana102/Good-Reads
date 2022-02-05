@@ -1,24 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
-
+import { ActivatedRoute } from '@angular/router';
+import { GenreDetailsModel } from '../models/general-models';
 @Component({
   selector: 'app-genre-books',
   templateUrl: './genre-books.component.html',
   styleUrls: ['./genre-books.component.scss']
 })
+
 export class GenreBooksComponent implements OnInit {
-  constructor(private api:AppService, public global: GlobalService) { 
-    console.log(this.global.genreData);
-  }
-  genreId: string = '5'
-  genreDetails:Array<any>=[]
+  books:GenreDetailsModel[]=[];
+  constructor(private api:AppService, private route:ActivatedRoute, public global: GlobalService) { }
+  //books = ["The Shining", "White is Witching", "The only good Indians", "The Outsider", "Reprieve", "Interviewing the Vampire", "Book7", "book8", "book9", "book10"];
+  description = "";
+  selectedbook = "";
+  bookId = this.route.snapshot.params.id;
+
   ngOnInit(): void {
-    console.log('entered genre');
-    this.api.getGenreDetails(this.genreId).subscribe((data)=>{
-      this.genreDetails = data;
-      console.log(this.genreDetails);
+    console.log(this.global.genreData);
+    this.api.getGenreDetails(String(this.bookId)).subscribe((data:GenreDetailsModel[])=>{
+      this.books=data;
     })
   }
+  showDescription(name: string) {
+    this.selectedbook = name;
+    // this.description = this.books.filter(x => x.name == name)[0].desc;
 
+  }
 }
+
+
+
+

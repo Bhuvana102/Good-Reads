@@ -1,8 +1,13 @@
-<body>
-    <h1 style="text-align: left; color: black; font-weight: bold;">Horror</h1>
-<div>{{this.global.genreData.Description}}</div>
-<h3>Books Tagged as Horror</h3>
-<img src="../../assets/Books/image1.jpg" alt="" class="bookImage">
-<img src="../../assets/Books/image2.jpg" alt="" class="bookImage"> 
-</body>
 <app-common-menu></app-common-menu>
+<div class="maindiv">
+    <h3>{{this.global.genreData.Name}}</h3>
+    <p>{{this.global.genreData.Description}}</p>
+    <h4>BOOKS TAGGED "{{this.global.genreData.Name}}"</h4>
+    <div class="wrapper">
+        <div *ngFor="let book of books">
+            <img [src]="'/assets/images/'+book.ImageName+'.jpg'" [alt]="book.Name+' not found ' "
+                (click)="showDescription(book.Name)" [class.selected]="selectedbook===book.Name">
+        </div>
+    </div>
+    <hr>
+</div>
