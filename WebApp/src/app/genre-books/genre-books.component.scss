@@ -22,3 +22,18 @@ img{
 .maindiv{
     background-image: linear-gradient(rgba(139, 131, 131, 0.164), rgba(26, 25, 25, 0.705)), url(/assets/images/bck.jpg);
 }
+.maindiv>h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.maindiv>p{
+    font-size: 18px;
+}
+
+
+.maindiv>h4{
+    font-size: 14px;
+    font-weight: bold;
+}
+
