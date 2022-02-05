@@ -16,7 +16,12 @@ Run the below commands to start the development server.
 Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 # Sprint 1 Demo Run
-![Browse Menu Option](https://user-images.githubusercontent.com/41356950/152629255-c60c4bdb-f08c-4f5b-9970-77ff2f512224.gif)
+
+Run Backend :
+![Running-the-code](https://user-images.githubusercontent.com/97717233/152629613-ff8847d5-6d0e-4dfb-ae27-daa01fbb36d6.gif)
+
+Run FrontEnd :
+![Running-the-code(1)](https://user-images.githubusercontent.com/97717233/152629631-86175819-b4a1-435c-b726-158fa617fcfd.gif)
 
 
 # Backend
@@ -26,6 +31,7 @@ The below API's are used to fetch the details from database and return it to the
 2. Get Particular Genre API
 3. Get Books based on Genre
 4. Insert Books into Database
+
 
 The Postman commands and sample examples can be viewed here : https://documenter.getpostman.com/view/19432934/UVeGqRHi  
 
@@ -39,6 +45,9 @@ Sample API and Sample Output
 Sample Output :
 ![Sample Output](https://github.com/Bhuvana102/Good-Reads/blob/main/Wiki-Images/GetGenerate-Sample-Response.png)
 
+Sample Demo :
+![Postman](https://user-images.githubusercontent.com/97717233/152629582-80d900f1-09ca-439f-8458-c7ebf065b1ed.gif)
+
 
 ## 2. Get Particular Genre API
 ###  GET localhost:8080/api/getGenres/5
@@ -46,6 +55,10 @@ The getGenres/{id} API is used to fetch a particular Genre from the database bas
 
 Sample API and Sample Output
 ![Get a Particular Genre](https://github.com/Bhuvana102/Good-Reads/blob/main/Wiki-Images/GetParticularGenre.png)
+
+Sample Demo :
+![Postman(1)](https://user-images.githubusercontent.com/97717233/152629591-0bdd823a-0f59-4bee-a344-6579229771b8.gif)
+
 
 ## 3. API to Insert books into Database
 ### http://localhost:8080/api/insertBook
@@ -58,6 +71,10 @@ Sample API usage via POSTMAN
 
 After the insertion API will return values in JSON format of the information inserted in DB and the ID generated for the book.
 
+Sample Demo :
+![Postman(2)](https://user-images.githubusercontent.com/97717233/152629596-b53a92a1-f9fe-413b-a7f7-c8f774fc28db.gif)
+
+
 ## 4. API to fetch Books from the Database tagged with requested GenreID
 ### http://localhost:8080/api/fetchGenreBooks?id=5
 
@@ -66,6 +83,10 @@ API will receive a request with Genre ID query in URL string and returns a array
 Sample API usage via POSTMAN
 
 ![image](https://user-images.githubusercontent.com/61014960/152610415-8d048b20-9943-4b76-a936-439fdee46489.png)
+
+Sample Demo :
+![Postman(3)](https://user-images.githubusercontent.com/97717233/152629602-5134250b-97cc-4688-8752-a18f63b72759.gif)
+
 
 # Front End
 
