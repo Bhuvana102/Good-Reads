@@ -129,18 +129,12 @@ Good Reads is equipped with a top menu bar which is embedded with a hamburger me
 ![Toolbar+Sidemenu](https://user-images.githubusercontent.com/41356950/152628116-efcb672c-9dee-4b03-8419-93271667f693.png)]]
 
 
-### Toolbar and Menu Demo
-
-
-![Toolbar and Menu](https://user-images.githubusercontent.com/41356950/152629395-5dcb8da9-a5c1-483a-a361-2136867a4f69.gif)
-
-
-
 ## 4. Browse Menu Item
 Browse option is one of the key functions of Good Reads and it enables users to select the Genre of Books which they are looking for. User can select a genre from the provided list, which redirects to the description screen.
 
+### Toolbar and Menu Demo
 
-![Browse Menu Dropdown](https://user-images.githubusercontent.com/41356950/152628123-be562daf-83c5-4ad1-a315-8656ab32939a.png)
+![Toolbar and Menu](https://user-images.githubusercontent.com/41356950/152629395-5dcb8da9-a5c1-483a-a361-2136867a4f69.gif)
 
 
 ### Browse Menu Demo
