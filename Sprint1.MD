@@ -16,7 +16,7 @@ Run the below commands to start the development server.
 Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 # Sprint 1 Demo Run
-![](Wiki-Images/Sprint1 Project Run-Initial.mp4)
+![video](Wiki-Images/Sprint1 Project Run-Initial.mp4)
 
 # Backend
 API :: 
