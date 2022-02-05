@@ -77,15 +77,27 @@ Sample API usage via POSTMAN
  ###  https://localhost:4200/login
 This is a basic non-functional and a design oriented login screen implemented to maintain the continuity of the Web Application. User as of Sprint 1 can click on login to enter the Web App.
 
+![loginPage](https://user-images.githubusercontent.com/41356950/152628108-728afaa1-7823-4af3-9369-05fef03aecad.png)
+
+
  ## 2. Landing Homepage
  ###  https://localhost:4200/home
 The Home Page is the first page post login to Good Reads, and contains basic promotion and interactive content for the users in the form of a carousel and auto slide items. This page can also be accessed from the top right hamburger menu and clicking on Home.
 
+![HomePage](https://user-images.githubusercontent.com/41356950/152628114-adae4570-da3f-408b-aa42-98a9b02097de.png)
+
+
  ## 3. Top and Side Menu Bar
 Good Reads is equipped with a top menu bar which is embedded with a hamburger menu icon. A click event on the icon pops a floating Side Draw menu bar holding the key functionalities of Good Reads.
 
+![Toolbar+Sidemenu](https://user-images.githubusercontent.com/41356950/152628116-efcb672c-9dee-4b03-8419-93271667f693.png)
+
+
   ## 4. Browse Menu Item
 Browse option is one of the key functions of Good Reads and it enables users to select the Genre of Books which they are looking for. User can select a genre from the provided list, which redirects to the description screen.
+
+![Browse Menu Dropdown](https://user-images.githubusercontent.com/41356950/152628123-be562daf-83c5-4ad1-a315-8656ab32939a.png)
+
 
   ## 5. Details of Books
   ###  https://localhost:4200/genre/{Selected Book ID}
