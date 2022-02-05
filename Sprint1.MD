@@ -108,12 +108,21 @@ Browse option is one of the key functions of Good Reads and it enables users to 
 ![Browse Menu Dropdown](https://user-images.githubusercontent.com/41356950/152628123-be562daf-83c5-4ad1-a315-8656ab32939a.png)
 
 
+### Browse Menu Demo
+
+![Browse Menu Option](https://user-images.githubusercontent.com/41356950/152629224-fd97d02d-56d4-4c29-8368-3813e164327d.gif)
+
 
   ## 5. Details of Books
   ###  https://localhost:4200/genre/{Selected Book ID}
 As the user selects a genre from browse side menu option, the details of the genre are fetched from the backend. We also fetch the books that fall under that particular genre and display the cover pages of the books.
 
 ![Description](https://user-images.githubusercontent.com/41356950/152628398-5d9157b5-054d-44c6-971e-cfa0cc1fe1fa.png)
+
+
+### Description Demo
+
+![Genre Description](https://user-images.githubusercontent.com/41356950/152629213-4a841837-24c3-44ca-9e2b-e21b7361b9da.gif)
 
 
 
