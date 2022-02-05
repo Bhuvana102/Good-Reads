@@ -24,6 +24,7 @@ import { CommunityComponent } from './community/community.component';
 import { HomepageComponent } from './homepage/homepage.component'
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { GenreBooksComponent } from './genre-books/genre-books.component';
+import { MyBooksComponent } from './my-books/my-books.component';
  @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { GenreBooksComponent } from './genre-books/genre-books.component';
     LoginComponent,
     CommunityComponent,
     HomepageComponent,
-    GenreBooksComponent
+    GenreBooksComponent,
+    MyBooksComponent
   ],
   imports: [
     CommonModule,

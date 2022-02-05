@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../services/api.service';
+import { GlobalService } from '../services/global.service';
 
 @Component({
   selector: 'app-genre-books',
@@ -7,8 +8,9 @@ import { AppService } from '../services/api.service';
   styleUrls: ['./genre-books.component.scss']
 })
 export class GenreBooksComponent implements OnInit {
-
-  constructor(private api:AppService) { }
+  constructor(private api:AppService, public global: GlobalService) { 
+    console.log(this.global.genreData);
+  }
   genreId: string = '5'
   genreDetails:Array<any>=[]
   ngOnInit(): void {
