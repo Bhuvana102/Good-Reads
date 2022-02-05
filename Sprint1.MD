@@ -86,8 +86,7 @@ This is a basic non-functional and a design oriented login screen implemented to
 
 ### Login Demo
 
-![LoginScreen](https://user-images.githubusercontent.com/41356950/152629261-abe161e9-cf7b-4027-b8fe-863b2a99df22.gif)
-
+![LoginScreen](https://user-images.githubusercontent.com/41356950/152629281-fb1c8875-64c9-49f0-b653-3927fe94fc77.gif)
 
 
  ## 2. Landing Homepage
