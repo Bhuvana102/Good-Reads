@@ -12,6 +12,7 @@ mat-sidenav {
     border-radius: 10px;
     padding: 16px;
     text-align: left;
+    min-width:50px
 }
 
 .side-menu-icon{
@@ -33,8 +34,9 @@ mat-sidenav {
     color: lightgray;
 }
 
+
 mat-sidenav-container {
-    height: calc(100vh - 65px);
+    position: inherit;
 }
 
 .menu-items {
@@ -71,6 +73,9 @@ mat-divider {
     margin-top: 16px;
     margin-bottom: 16px;
     background-color: rgba(255, 255, 255, 0.5);
+}
+mat-drawer-container{
+    position: inherit;
 }
 
 // Start to hover

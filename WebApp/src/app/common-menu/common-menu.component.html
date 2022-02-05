@@ -3,14 +3,14 @@
 <mat-toolbar>
     <mat-icon style='padding-right: 10px;'>auto_stories</mat-icon>
     <span>Read And Rejoice</span>
-    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()" class='side-menu-icon'>
-        <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()" class='side-menu-icon' autosize="true">
+        <mat-icon *ngIf="!sidenav.opened" >menu</mat-icon>
         <mat-icon *ngIf="sidenav.opened">close</mat-icon>
     </button>
 </mat-toolbar>
 
 <mat-sidenav-container>
-    <mat-sidenav #sidenav="matSidenav" [(opened)]="opened" position='end'>
+    <mat-sidenav #drawer #sidenav="matSidenav" [(opened)]="opened" position='end' [fixedInViewport]="false">
         <button mat-button class="menu-items" (click)="goToHome()">
             <mat-icon>home</mat-icon>
             <span>Home</span>
@@ -35,7 +35,7 @@
         </button>
     </mat-sidenav>
     <mat-sidenav-content>
-        <div class="content" *ngIf="this.global.activePage==='home'">
+        <!-- <div class="content" *ngIf="this.global.activePage==='home'">
             <app-homepage></app-homepage>
         </div>
         <div class="content" *ngIf="this.global.activePage==='community'">
@@ -43,6 +43,6 @@
         </div>
         <div class="content" *ngIf="this.global.activePage==='genre'">
             <app-genre-books></app-genre-books>
-        </div>
+        </div> -->
     </mat-sidenav-content>
 </mat-sidenav-container>
