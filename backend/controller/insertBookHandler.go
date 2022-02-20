@@ -9,6 +9,7 @@ import (
 
 func InsertBookHandler() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		if r.Method == http.MethodPost {
 			data := views.Book{}
 			json.NewDecoder(r.Body).Decode(&data)

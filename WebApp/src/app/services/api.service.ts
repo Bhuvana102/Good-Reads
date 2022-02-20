@@ -11,9 +11,9 @@ export class AppService {
   constructor(private http: HttpClient) { }
 
   getGenres(): Observable<GenreModel[]>{
-    return this.http.get<GenreModel[]>('http://localhost:4200/api/getGenres');
+    return this.http.get<GenreModel[]>('http://localhost:8080/api/getGenres');
   }
   getGenreDetails(genreid:string):Observable<GenreDetailsModel[]>{
-    return this.http.get<GenreDetailsModel[]>('http://localhost:4200/api/fetchGenreBooks?id='+genreid);
+    return this.http.get<GenreDetailsModel[]>('http://localhost:8080/api/fetchGenreBooks?id='+genreid);
   }
 }
