@@ -6,6 +6,8 @@ import (
 	"good-reads/model"
 
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 func main() {
@@ -15,5 +17,6 @@ func main() {
 	r := controller.Starter()
 
 	fmt.Println("Server started")
-	http.ListenAndServe("localhost:8080", r)
+	r.Use(mux.CORSMethodMiddleware(r))
+	http.ListenAndServe(":8080", r)
 }
