@@ -6,7 +6,7 @@
     <div class="wrapper">
         <div *ngFor="let book of books">
             <img [src]="'/assets/images/'+book.ImageName+'.jpg'" [alt]="book.Name+' not found ' "
-                (click)="showDescription(book.Name)" [class.selected]="selectedbook===book.Name">
+                (mouseover)="showDescription(book.Name)" [class.selected]="selectedbook===book.Name">
         </div>
     </div>
     <hr>
