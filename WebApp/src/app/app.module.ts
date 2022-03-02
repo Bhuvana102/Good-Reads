@@ -25,6 +25,7 @@ import { HomepageComponent } from './homepage/homepage.component'
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { GenreBooksComponent } from './genre-books/genre-books.component';
 import { MyBooksComponent } from './my-books/my-books.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
  @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { MyBooksComponent } from './my-books/my-books.component';
     MatListModule,
     MatTabsModule,
     CarouselModule,
+    NgbModule,
   ],
   exports: [ MatNativeDateModule,
     MatInputModule,
