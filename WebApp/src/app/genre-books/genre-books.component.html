@@ -5,9 +5,15 @@
     <h4>BOOKS TAGGED "{{this.global.genreData.Name}}"</h4>
     <div class="wrapper">
         <div *ngFor="let book of books">
-            <img [src]="'/assets/images/'+book.ImageName+'.jpg'" [alt]="book.Name+' not found ' "
-                (mouseover)="showDescription(book.Name)" [class.selected]="selectedbook===book.Name">
+            <img [src]="'/assets/images/'+book.ImageName+'.jpg'" [alt]="book.Name+' not found ' " [ngbTooltip]="tooltip"
+                (mouseover)="showDescription(book.Name)" [class.selected]="selectedbook?.Name===book.Name">
         </div>
     </div>
     <hr>
 </div>
+<ng-template #tooltip>
+    <div class="bookDesc">
+        {{selectedbook.PublisherName}} <br> {{selectedbook.Description}}
+    </div>
+
+</ng-template>
