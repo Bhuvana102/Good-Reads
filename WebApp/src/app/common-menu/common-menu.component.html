@@ -11,25 +11,25 @@
 
 <mat-sidenav-container>
     <mat-sidenav #drawer #sidenav="matSidenav" [(opened)]="opened" position='end' [fixedInViewport]="false">
-        <button mat-button class="menu-items" (click)="goToHome()">
+        <button mat-button class="menu-items" (click)="goToHome()" (mouseleave)="menuTrigger.closeMenu()">
             <mat-icon>home</mat-icon>
             <span>Home</span>
         </button>
-        <button mat-button class="menu-items" (click)="goToMyBooks()">
+        <button mat-button class="menu-items" (click)="goToMyBooks()" (mouseleave)="menuTrigger.closeMenu()">
             <mat-icon>menu_book</mat-icon>
             <span>My Books</span>
         </button>
-        <mat-list-item [matMenuTriggerFor]="genresMenu" style="padding: 0px; margin: 0px;">
-            <button mat-button>
+        <mat-list-item [matMenuTriggerFor]="genresMenu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()">
+            <button mat-button class="menu-items">
                 <mat-icon>pageview</mat-icon>
                 <span>Browse</span>
             </button>
         </mat-list-item>
-        <mat-menu #genresMenu="matMenu">
+        <mat-menu #genresMenu="matMenu" [hasBackdrop]="false">
                 <button mat-menu-item *ngFor="let genre of genres" (click)="goToGenre(genre.Id)">{{genre.Name}}</button>
         </mat-menu>
         <mat-divider></mat-divider>
-        <button mat-button class="menu-items" (click)="goToCommunity()">
+        <button mat-button class="menu-items" (click)="goToCommunity()" (mouseleave)="menuTrigger.closeMenu()">
             <mat-icon>people</mat-icon>
             <span>Community</span>
         </button>
