@@ -17,11 +17,9 @@ func Starter() *mux.Router {
 
 	subRoute.HandleFunc("/insertBook", InsertBookHandler()).Methods(http.MethodPost, http.MethodOptions)
 
-
-	subRoute.HandleFunc("/addReviews", AddReviewsHandler()).Methods(http.MethodPost, http.MethodOptions)
-
 	subRoute.HandleFunc("/getBook", FetchBookDataHandler()).Methods(http.MethodGet, http.MethodOptions)
 
+	subRoute.HandleFunc("/addReviews", AddReviewsHandler()).Methods(http.MethodPost, http.MethodOptions)
 
 	return subRoute
 }
