@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSnackBar, _SnackBarContainer } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { GenreModel } from '../models/general-models';
 import { AppService } from '../services/api.service';
@@ -12,7 +13,7 @@ import { GlobalService } from '../services/global.service';
 export class CommonMenuComponent implements OnInit {
 
   constructor(private api: AppService, private router: Router,
-    public global: GlobalService) { }
+    public global: GlobalService, private snackbar: MatSnackBar) { }
   public genres: GenreModel[] = [];
   opened: boolean = false;
   ngOnInit(): void {
@@ -45,5 +46,4 @@ export class CommonMenuComponent implements OnInit {
     this.global.activePage = 'community';
     this.router.navigate(['/community']);
   }
-
 }
