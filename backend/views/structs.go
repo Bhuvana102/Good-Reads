@@ -28,3 +28,12 @@ type Book struct {
 	CreatedAt     time.Time
 	UpdatedAt     time.Time
 }
+
+type Review struct {
+	Review_Num    uint   `gorm:"primaryKey"`
+	Book_ID       string `JSON:"Book_ID"`
+	User_ID       string `JSON:"User_ID"`
+	Rating        string `JSON:"Rating"`
+	Review        string `JSON:"Review"`
+	Reviewed_Date time.Time
+}
