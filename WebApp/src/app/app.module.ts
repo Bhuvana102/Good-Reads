@@ -62,7 +62,7 @@ import {MatCardModule} from '@angular/material/card';
     CarouselModule,
     NgbModule,
     MatSnackBarModule,
-    MatCardModule
+    MatCardModule,
   ],
   exports: [ MatNativeDateModule,
     MatInputModule,

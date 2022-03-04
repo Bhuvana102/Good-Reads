@@ -14,13 +14,13 @@
             <mat-tab label="Login">
               <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
-                <input type="email" matInput placeholder="Email" value="" [(ngModel)]="email">
+                <input type="email" #loginId matInput placeholder="Email" value="" [(ngModel)]="email">
                 <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
     
               <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
-                <input type="password" matInput placeholder="Password" [(ngModel)]="password">
+                <input type="password" #loginpassword matInput placeholder="Password" [(ngModel)]="password">
                 <mat-icon matSuffix>vpn_key</mat-icon>
               </mat-form-field>
               <button mat-button color="primary" (click)="login()">Login</button>
@@ -28,13 +28,13 @@
             <mat-tab label="Register">
               <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
-                <input type="email" matInput placeholder="Email" value="" [(ngModel)]="remail">
+                <input type="email" #regEmail matInput placeholder="Email" value="" [(ngModel)]="remail">
                 <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
     
               <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
-                <input type="password" matInput placeholder="Password" [(ngModel)]="rpassword">
+                <input type="password" #regPassword matInput placeholder="Password" [(ngModel)]="rpassword">
                 <mat-icon matSuffix>vpn_key</mat-icon>
               </mat-form-field>
               <mat-form-field class="example-full-width">
