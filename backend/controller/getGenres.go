@@ -10,6 +10,7 @@ import (
 
 func GetGenreForIDHandler() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		fmt.Println("Request received")
 
 		vars := mux.Vars(r)
@@ -25,6 +26,7 @@ func GetGenreForIDHandler() http.HandlerFunc {
 
 func GetGenresHandler() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		fmt.Println("Request received")
 
 		body := model.FetchAllGenre()

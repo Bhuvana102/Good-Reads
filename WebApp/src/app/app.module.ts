@@ -25,6 +25,10 @@ import { HomepageComponent } from './homepage/homepage.component'
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { GenreBooksComponent } from './genre-books/genre-books.component';
 import { MyBooksComponent } from './my-books/my-books.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatCardModule} from '@angular/material/card';
+
  @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +60,9 @@ import { MyBooksComponent } from './my-books/my-books.component';
     MatListModule,
     MatTabsModule,
     CarouselModule,
+    NgbModule,
+    MatSnackBarModule,
+    MatCardModule
   ],
   exports: [ MatNativeDateModule,
     MatInputModule,
@@ -69,7 +76,8 @@ import { MyBooksComponent } from './my-books/my-books.component';
     MatTreeModule,
     HttpClientModule,
     MatListModule,
-    MatTabsModule,],
+    MatTabsModule,
+    MatSnackBarModule],
   providers: [],
   bootstrap: [AppComponent]
 })

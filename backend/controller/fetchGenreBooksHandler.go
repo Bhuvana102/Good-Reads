@@ -9,6 +9,7 @@ import (
 
 func FetchGenreBooksHandler() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		if r.Method == http.MethodGet {
 			fmt.Println("Fetching data for reqested genre ID:", r.URL.Query().Get("id"))
 			gid := r.URL.Query().Get("id")
