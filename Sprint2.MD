@@ -1,19 +1,17 @@
 # GoodReads - Sprint2 Closure
 
 Run the below command to run the WebApp Server
->`ng serve --proxy-config proxy.config.json`
+>`ng serve`
 
 # Development server
 Run the below commands to start the development server.
 > `cd WebApp`
 
-> `ng serve --proxy-config proxy.config.json`
+> `ng serve`
 
 > `cd ../backend`
 
 > `go run main.go `
-
-> 'npx cypress open' or 'npm run e2e'
 
 First the localhost:4200 will start upon ng serve and then a new tab for cypress test will also open upon running the cypress related commands.
 
@@ -25,10 +23,9 @@ Run Backend :
 Run FrontEnd :
 ![Running-the-code(1)](https://user-images.githubusercontent.com/97717233/152629631-86175819-b4a1-435c-b726-158fa617fcfd.gif)
 
-Run FrontEndTestScripts :
+Run FrontEndTestScripts : `npx cypress open' or 'npm run e2e`
 
-
-Run BackEndTestSrcipts :
+Run BackEndTestSrcipts : `go test -v`
 
 
 # Backend
@@ -44,26 +41,23 @@ The Postman commands and sample examples can be viewed here : https://documenter
 
 ## 1. Implemented CORS for Front End API Access
 
-This getGenres API is used to fetch all the Genres Present in The Genres Table from the Database.
+We implemented Cross-Origin Resource Sharing (CORS) to the backend application to serve api requests coming from Frontend server.
 
-Sample API and Sample Output
-![Sample GetGenre API](https://github.com/Bhuvana102/Good-Reads/blob/main/Wiki-Images/localhost-GetGenre.png)
+###Implementation
 
-Sample Output :
-![Sample Output](https://github.com/Bhuvana102/Good-Reads/blob/main/Wiki-Images/GetGenerate-Sample-Response.png)
+Add the following header to Handler Func of APIs
 
-Sample Demo :
-![Postman](https://user-images.githubusercontent.com/97717233/152629582-80d900f1-09ca-439f-8458-c7ebf065b1ed.gif)
+> w.Header().Set("Access-Control-Allow-Origin", "*")
 
 
 ## 2. API to return Book Details by ID
-The getGenres/{id} API is used to fetch a particular Genre from the database based on the Genre ID requested from the frontend Webpage.
+The /api/getBook API is used to fetch a particular Book by its ID as requested from the frontend Webpage.
 
-Sample API and Sample Output
-![Get a Particular Genre](https://github.com/Bhuvana102/Good-Reads/blob/main/Wiki-Images/GetParticularGenre.png)
+Sample API usage and Output
 
-Sample Demo :
-![Postman(1)](https://user-images.githubusercontent.com/97717233/152629591-0bdd823a-0f59-4bee-a344-6579229771b8.gif)
+http://localhost:8080/api/getBook?id=5
+
+![image](https://user-images.githubusercontent.com/61014960/156866162-7c2cec5c-28df-49c1-83e3-1813902854d3.png)
 
 
 ## 3. API to post book reviews
@@ -83,17 +77,11 @@ Sample Demo :
 
 ## 4. Unit Test Cases for APIs
 
-API will receive a request with Genre ID query in URL string and returns a array of all the books in DB tagged with the requested Genre ID in JSON format.
+> `go test -v`
 
-Sample API usage via POSTMAN
+We have given existing data in Database to test if the APIs are returning the expected data as per the request.
 
-![image](https://user-images.githubusercontent.com/61014960/152610415-8d048b20-9943-4b76-a936-439fdee46489.png)
-
-Sample Demo :
-![Postman(3)](https://user-images.githubusercontent.com/97717233/152629602-5134250b-97cc-4688-8752-a18f63b72759.gif)
-
-
-
+![image](https://user-images.githubusercontent.com/61014960/156866328-a08ede8b-a182-4367-9cd9-8aa97f74ff03.png)
 
 # Front End
 
@@ -155,6 +143,8 @@ books for genre. Once we add more books for other pages, you will also be able t
 
 
 ## 6. Cypress Unit Test for Login Feature
+
+> `npx cypress open' or 'npm run e2e`
 
 Installed the Cypress framework and added the login.specs.ts file to perform unit testing for the login feature we have implemented as part of our website.
 We have implemented the following 5 test cases as part of unit testing.
