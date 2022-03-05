@@ -107,14 +107,20 @@ Sample Demo :
 ## 1. Upgraded Login Page to Be user-friendly
 ###  https://localhost:4200/login
 
+On top of the existing login page UI, a register feature UI is added to allow user registration and user management to be taken up in the upcoming sprints. We improved on the user experience and usability of the login page. 
+
 
 ## 2. Resized Home Page Slider for better UI Experience
 
+In the previous sprint, we noticed a user experience issue in the home page slider where the images are oversized with respect to the form factor ratio. We resolved this to maintain the form factor intact.
 
 ## 3. Hover Feature on Genre listing
 
+We extended the Genre listing to include the list on hovering. Hovering browse now lists the genres directly instead of a click event
+
 
 ## 4. Logout Feature from Frontend
+
 
 
 ## 5. Added tooltip feature in genre page
