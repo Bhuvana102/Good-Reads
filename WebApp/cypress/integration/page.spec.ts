@@ -21,19 +21,19 @@ describe('Our genre browse', () => {
         cy.contains('Thriller').click();
         cy.wait(1000);
     })
-    it("Clicking genre 2 from the browse menu", () => {
+    it("Clicking genre 3 from the browse menu", () => {
         cy.server()
         cy.route('GET', 'http://localhost:8080/api/getGenres').as('getGenres')
         cy.contains('Romance').click();
         cy.wait(1000);
     })
-    it("Clicking genre 2 from the browse menu", () => {
+    it("Clicking genre 4 from the browse menu", () => {
         cy.server()
         cy.route('GET', 'http://localhost:8080/api/getGenres').as('getGenres')
         cy.contains('Classics').click();
         cy.wait(1000);
     })
-    it("Clicking genre 2 from the browse menu", () => {
+    it("Clicking genre 5 from the browse menu", () => {
         cy.server()
         cy.route('GET', 'http://localhost:8080/api/getGenres').as('getGenres')
         cy.contains('Cook-Books').click();
