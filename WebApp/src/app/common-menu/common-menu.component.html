@@ -33,6 +33,10 @@
             <mat-icon>people</mat-icon>
             <span>Community</span>
         </button>
+        <button mat-button class="menu-items" (click)="logOut()" (mouseleave)="menuTrigger.closeMenu()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+        </button>
     </mat-sidenav>
     <mat-sidenav-content>
         <!-- <div class="content" *ngIf="this.global.activePage==='home'">

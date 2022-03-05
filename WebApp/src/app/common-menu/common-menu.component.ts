@@ -46,4 +46,8 @@ export class CommonMenuComponent implements OnInit {
     this.global.activePage = 'community';
     this.router.navigate(['/community']);
   }
+  logOut(){
+    this.snackbar.open('Logged Out','',{duration:1000})
+    this.router.navigate(['/login'] ,{replaceUrl: true} );
+  }
 }
