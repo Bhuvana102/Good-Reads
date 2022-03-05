@@ -111,15 +111,27 @@ Sample Demo :
 
 On top of the existing login page UI, a register feature UI is added to allow user registration and user management to be taken up in the upcoming sprints. We improved on the user experience and usability of the login page. 
 
+Sample Images:
+
+![Login](https://user-images.githubusercontent.com/92141914/156864595-97b3f14e-43c7-4b88-a94c-5834bbd2d66c.png)
+![Register](https://user-images.githubusercontent.com/92141914/156864599-b485e0e3-c51b-418e-9b52-087335ccdbc1.png)
+
 
 ## 2. Resized Home Page Slider for better UI Experience
 
 In the previous sprint, we noticed a user experience issue in the home page slider where the images are oversized with respect to the form factor ratio. We resolved this to maintain the form factor intact.
 
+Sample Image:
+![home](https://user-images.githubusercontent.com/92141914/156864663-48193b77-e99f-4001-9074-36d043222354.png)
+
+
 ## 3. Hover Feature on Genre listing
 
 We extended the Genre listing to include the list on hovering. Hovering browse now lists the genres directly instead of a click event
 
+Sample Demo :
+
+![trim 4FB88363-547B-4AC7-BF6B-F6F904D720DE](https://user-images.githubusercontent.com/92141914/156863955-22b9c166-e0a1-49d3-a0e5-1ba08d41eb4a.GIF)
 
 ## 4. Logout Feature from Frontend
 
@@ -132,6 +144,7 @@ every genre, for now you wouldn't be able to see this feature on other genre pag
 books for genre. Once we add more books for other pages, you will also be able to see the same tooltip appear on every book under every genre.
 
 
+
 ## 6. Cypress Unit Test for Login Feature
 
 Installed the Cypress framework and added the login.specs.ts file to perform unit testing for the login feature we have implemented as part of our website.
@@ -142,9 +155,6 @@ We have implemented the following 5 test cases as part of unit testing.
 4) Logging in with wrong login id and password.
 5) Logging in with the right credentials.
 
-Sample Demo :
-
-![trim 4FB88363-547B-4AC7-BF6B-F6F904D720DE](https://user-images.githubusercontent.com/92141914/156863955-22b9c166-e0a1-49d3-a0e5-1ba08d41eb4a.GIF)
 
 
 ## 7. Cypress Integration Test for Genre List
