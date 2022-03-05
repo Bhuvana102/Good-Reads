@@ -93,6 +93,8 @@ Sample Demo :
 ![Postman(3)](https://user-images.githubusercontent.com/97717233/152629602-5134250b-97cc-4688-8752-a18f63b72759.gif)
 
 
+
+
 # Front End
 
 - The below modules are created as part of Sprint 2 - UI in Good Reads Web Application
@@ -139,6 +141,10 @@ We have implemented the following 5 test cases as part of unit testing.
 3) Logging in without login id and just password.
 4) Logging in with wrong login id and password.
 5) Logging in with the right credentials.
+
+Sample Demo :
+
+![trim 4FB88363-547B-4AC7-BF6B-F6F904D720DE](https://user-images.githubusercontent.com/92141914/156863955-22b9c166-e0a1-49d3-a0e5-1ba08d41eb4a.GIF)
 
 
 ## 7. Cypress Integration Test for Genre List
