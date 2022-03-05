@@ -13,7 +13,9 @@ Run the below commands to start the development server.
 
 > `go run main.go `
 
-Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+> 'npx cypress open' or 'npm run e2e'
+
+First the localhost:4200 will start upon ng serve and then a new tab for cypress test will also open upon running the cypress related commands.
 
 # Sprint 2 Demo Run
 
@@ -22,6 +24,11 @@ Run Backend :
 
 Run FrontEnd :
 ![Running-the-code(1)](https://user-images.githubusercontent.com/97717233/152629631-86175819-b4a1-435c-b726-158fa617fcfd.gif)
+
+Run FrontEndTestScripts :
+
+
+Run BackEndTestSrcipts :
 
 
 # Backend
@@ -88,13 +95,14 @@ Sample Demo :
 
 # Front End
 
-- The below modules are created as part of Sprint 1 - UI in Good Reads Web Application
+- The below modules are created as part of Sprint 2 - UI in Good Reads Web Application
 1. Upgraded Login Page to Be user-friendly
 2. Resized Home Page Slider for better UI Experience
 3. Hover Feature on Genre listing
 4. Logout Feature from Frontend
-5. Cypress Unit Test for Login Feature
-6. Cypress Integration Test for Genre LIst 
+5. Added tooltip feature in genre page
+6. Cypress Unit Test for Login Feature
+7. Cypress Integration Test for Genre LIst 
  
 ## 1. Upgraded Login Page to Be user-friendly
 ###  https://localhost:4200/login
@@ -109,10 +117,13 @@ Sample Demo :
 ## 4. Logout Feature from Frontend
 
 
-## 5. Cypress Unit Test for Login Feature
+## 5. Added tooltip feature in genre page
 
 
-## 6. Cypress Integration Test for Genre LIst
+## 6. Cypress Unit Test for Login Feature
+
+
+## 7. Cypress Integration Test for Genre LIst
 
 
 
