@@ -3,8 +3,9 @@
 <mat-toolbar>
     <mat-icon style='padding-right: 10px;'>auto_stories</mat-icon>
     <span>Good Reads</span>
-    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()" class='side-menu-icon' autosize="true">
-        <mat-icon *ngIf="!sidenav.opened" >menu</mat-icon>
+    <button mat-icon-button id="side-menu" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()"
+        class='side-menu-icon' autosize="true">
+        <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
         <mat-icon *ngIf="sidenav.opened">close</mat-icon>
     </button>
 </mat-toolbar>
@@ -19,14 +20,15 @@
             <mat-icon>menu_book</mat-icon>
             <span>My Books</span>
         </button>
-        <mat-list-item [matMenuTriggerFor]="genresMenu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()">
+        <mat-list-item [matMenuTriggerFor]="genresMenu" id='side-menu-browse' #menuTrigger="matMenuTrigger"
+            (mouseover)="menuTrigger.openMenu()">
             <button mat-button class="menu-items">
                 <mat-icon>pageview</mat-icon>
                 <span>Browse</span>
             </button>
         </mat-list-item>
         <mat-menu #genresMenu="matMenu" [hasBackdrop]="false">
-                <button mat-menu-item *ngFor="let genre of genres" (click)="goToGenre(genre.Id)">{{genre.Name}}</button>
+            <button mat-menu-item *ngFor="let genre of genres" (click)="goToGenre(genre.Id)">{{genre.Name}}</button>
         </mat-menu>
         <mat-divider></mat-divider>
         <button mat-button class="menu-items" (click)="goToCommunity()" (mouseleave)="menuTrigger.closeMenu()">
