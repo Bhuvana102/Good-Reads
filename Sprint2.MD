@@ -69,10 +69,7 @@ Sample API usage via POSTMAN
 
 ![image](https://user-images.githubusercontent.com/61014960/152491281-6dc95cd0-635e-4994-87f8-e0f8d6e4a651.png)
 
-After the insertion API will return values in JSON format of the information inserted in DB and the ID generated for the book.
-
-Sample Demo :
-![Postman(2)](https://user-images.githubusercontent.com/97717233/152629596-b53a92a1-f9fe-413b-a7f7-c8f774fc28db.gif)
+After the insertion API will return values in JSON format of the information inserted in DB and the ID generated for the book review.
 
 
 ## 4. Unit Test Cases for APIs
