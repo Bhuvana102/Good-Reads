@@ -1,13 +1,13 @@
 # GoodReads - Sprint2 Closure
 
 Run the below command to run the WebApp Server
->`ng serve --proxy-config proxy.config.json`
+>`ng serve`
 
 # Development server
 Run the below commands to start the development server.
 > `cd WebApp`
 
-> `ng serve --proxy-config proxy.config.json`
+> `ng serve`
 
 > `cd ../backend`
 
@@ -23,10 +23,9 @@ Run Backend :
 Run FrontEnd :
 ![Running-the-code(1)](https://user-images.githubusercontent.com/97717233/152629631-86175819-b4a1-435c-b726-158fa617fcfd.gif)
 
-Run FrontEndTestScripts :
+Run FrontEndTestScripts : `npx cypress open' or 'npm run e2e`
 
-
-Run BackEndTestSrcipts :
+Run BackEndTestSrcipts : `go test -v`
 
 
 # Backend
@@ -86,8 +85,6 @@ We have given existing data in Database to test if the APIs are returning the ex
 
 # Front End
 
-> `npx cypress open' or 'npm run e2e`
-
 - The below modules are created as part of Sprint 2 - UI in Good Reads Web Application
 1. Upgraded Login Page to Be user-friendly
 2. Resized Home Page Slider for better UI Experience
@@ -146,6 +143,8 @@ books for genre. Once we add more books for other pages, you will also be able t
 
 
 ## 6. Cypress Unit Test for Login Feature
+
+> `npx cypress open' or 'npm run e2e`
 
 Installed the Cypress framework and added the login.specs.ts file to perform unit testing for the login feature we have implemented as part of our website.
 We have implemented the following 5 test cases as part of unit testing.
