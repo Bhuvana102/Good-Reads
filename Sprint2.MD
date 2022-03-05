@@ -150,6 +150,9 @@ every genre, for now you wouldn't be able to see this feature on other genre pag
 books for genre. Once we add more books for other pages, you will also be able to see the same tooltip appear on every book under every genre.
 
 
+![tooltip](https://user-images.githubusercontent.com/41356950/156865157-9989c27a-db1b-4ddc-89f2-e64b8ec816f4.png)
+
+
 
 ## 6. Cypress Unit Test for Login Feature
 
