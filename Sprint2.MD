@@ -1,4 +1,4 @@
-# GoodReads - Sprint1 Closure
+# GoodReads - Sprint2 Closure
 
 Run the below command to run the WebApp Server
 >`ng serve --proxy-config proxy.config.json`
@@ -121,16 +121,37 @@ We extended the Genre listing to include the list on hovering. Hovering browse n
 
 ## 4. Logout Feature from Frontend
 
-
+Implemented a new feature to logout the application from frontend perspective. Once the user logs out, the user would be prompted to relogin
 
 ## 5. Added tooltip feature in genre page
+
+Developed a new tooltip feature which will get displayed upon hovering over every book in the genre Page called 'Horror'. Althought dynamically implemented for 
+every genre, for now you wouldn't be able to see this feature on other genre pages as we have not dynamically included other genres to reflect different list of 
+books for genre. Once we add more books for other pages, you will also be able to see the same tooltip appear on every book under every genre.
 
 
 ## 6. Cypress Unit Test for Login Feature
 
+Installed the Cypress framework and added the login.specs.ts file to perform unit testing for the login feature we have implemented as part of our website.
+We have implemented the following 5 test cases as part of unit testing.
+1) Logging in without entering any credentials.
+2) Logging in with login id and no password.
+3) Logging in without login id and just password.
+4) Logging in with wrong login id and password.
+5) Logging in with the right credentials.
 
-## 7. Cypress Integration Test for Genre LIst
 
+## 7. Cypress Integration Test for Genre List
+
+As mentioned above, we have also used Cypress to show that the integration testing which is basically to show that both frontend and backend has been integrated
+well and as part of this testing we have tried to implement the following test cases
+1) To login and dynamically retrieve the genre 'Horror'.
+2) To dynamically retrieve the genre 'Thriller'.
+3) To select the genre 'Romance' dynamically.
+4) To select the genre 'Classics'.
+5) To dynamically select the genre 'Cook-books'.
+
+The test cases above are only to show that the unit and integration works. More test cases will be added upon addition of more features.
 
 
 
