@@ -164,6 +164,7 @@ We have implemented the following 5 test cases as part of unit testing.
 4) Logging in with wrong login id and password.
 5) Logging in with the right credentials.
 
+![Cypress Unit Test](https://user-images.githubusercontent.com/41356950/156865229-e4616ee9-6ac2-40be-9acb-d81ef16e85cb.png)
 
 
 ## 7. Cypress Integration Test for Genre List
@@ -179,4 +180,5 @@ well and as part of this testing we have tried to implement the following test c
 The test cases above are only to show that the unit and integration works. More test cases will be added upon addition of more features.
 
 
+![Integration Test](https://user-images.githubusercontent.com/41356950/156865234-091cc8d9-078d-407c-a232-3bcf45e204dd.png)
 
