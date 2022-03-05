@@ -144,7 +144,7 @@ We have implemented the following 5 test cases as part of unit testing.
 
 Sample Demo :
 
-![trim 4FB88363-547B-4AC7-BF6B-F6F904D720DE](https://user-images.githubusercontent.com/92141914/156863955-22b9c166-e0a1-49d3-a0e5-1ba08d41eb4a.GIF | width=100)
+![trim 4FB88363-547B-4AC7-BF6B-F6F904D720DE](https://user-images.githubusercontent.com/92141914/156863955-22b9c166-e0a1-49d3-a0e5-1ba08d41eb4a.GIF)
 
 
 ## 7. Cypress Integration Test for Genre List
