@@ -135,7 +135,13 @@ Sample Demo :
 
 ## 4. Logout Feature from Frontend
 
-Implemented a new feature to logout the application from frontend perspective. Once the user logs out, the user would be prompted to relogin
+Implemented a new feature to logout the application from frontend perspective. Once the user logs out, the user would be prompted to re-login
+
+![Logout](https://user-images.githubusercontent.com/41356950/156865076-c0a2a5e4-c78f-4e80-96d4-51648906a841.png)
+
+
+![Logged Out](https://user-images.githubusercontent.com/41356950/156865079-cf44a97f-8a39-41f3-a7d2-fd2fa134ae76.png)
+
 
 ## 5. Added tooltip feature in genre page
 
