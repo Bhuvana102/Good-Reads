@@ -16,7 +16,7 @@ func FetchBookDataHandler() http.HandlerFunc {
 			data := model.FetchBookDataFunc(bId)
 			w.WriteHeader(http.StatusOK)
 			json.NewEncoder(w).Encode(data)
-			fmt.Println(data)
+			// fmt.Println(data)
 		}
 	}
 }

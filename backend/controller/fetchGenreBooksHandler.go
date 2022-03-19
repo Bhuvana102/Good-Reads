@@ -16,7 +16,7 @@ func FetchGenreBooksHandler() http.HandlerFunc {
 			data := model.FetchGenreBooksFunc(gid)
 			w.WriteHeader(http.StatusOK)
 			json.NewEncoder(w).Encode(data)
-			fmt.Println(data)
+			// fmt.Println(data)
 		}
 	}
 }

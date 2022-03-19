@@ -10,7 +10,7 @@ func Starter() *mux.Router {
 	r := mux.NewRouter()
 	subRoute := r.PathPrefix("/api").Subrouter()
 
-	subRoute.HandleFunc("/getGenres/{id}", GetGenreForIDHandler()).Methods(http.MethodGet, http.MethodPost, http.MethodOptions)
+	subRoute.HandleFunc("/getGenreForID", GetGenreForIDHandler()).Methods(http.MethodGet, http.MethodPost, http.MethodOptions)
 	subRoute.HandleFunc("/getGenres", GetGenresHandler()).Methods(http.MethodGet, http.MethodPost, http.MethodOptions)
 
 	subRoute.HandleFunc("/fetchGenreBooks", FetchGenreBooksHandler()).Methods(http.MethodGet, http.MethodOptions)

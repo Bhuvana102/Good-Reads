@@ -4,22 +4,31 @@ import (
 	"fmt"
 	"good-reads/model"
 	"net/http"
-
-	"github.com/gorilla/mux"
 )
 
 func GetGenreForIDHandler() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 		fmt.Println("Request received")
+		if r.Method == http.MethodGet {
+			fmt.Println("Fetching Genre details for for reqested Genre ID:", r.URL.Query().Get("id"))
+			bId := r.URL.Query().Get("id")
+			data := model.FetchGenre(bId)
+			w.Header().Set("content-type", "application/json")
+			w.Write(data)
+			// w.WriteHeader(http.StatusOK)
+			// json.NewEncoder(w).Encode(data)
+			//fmt.Println(data)
+		}
 
-		vars := mux.Vars(r)
-		key := vars["id"]
+		// vars := mux.Vars(r)
+		// key := vars["id"]
 
-		body := model.FetchGenre(key)
+		// key = "5"
+		// body := model.FetchGenre(key)
 
-		w.Header().Set("content-type", "application/json")
-		w.Write(body)
+		// w.Header().Set("content-type", "application/json")
+		// w.Write(body)
 
 	}
 }

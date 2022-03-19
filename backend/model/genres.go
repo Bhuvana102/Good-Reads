@@ -7,11 +7,16 @@ import (
 	"strconv"
 )
 
-func FetchGenre(id string) []byte {
+func FetchGenre(gid string) []byte {
 
-	Id, _ := strconv.Atoi(id)
+	// var genre views.Genres
+	// DB.Where("id", gid).Find(&genre)
+	// body, _ := json.Marshal(genre)
+	// return body
 
-	log.Println("fetching genres ...")
+	Id, _ := strconv.Atoi(gid)
+
+	log.Println("fetching genres for id num - ", gid)
 
 	var genre views.Genres
 
