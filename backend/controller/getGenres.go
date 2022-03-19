@@ -24,7 +24,6 @@ func GetGenreForIDHandler() http.HandlerFunc {
 		// vars := mux.Vars(r)
 		// key := vars["id"]
 
-		// key = "5"
 		// body := model.FetchGenre(key)
 
 		// w.Header().Set("content-type", "application/json")
