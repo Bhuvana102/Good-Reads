@@ -5,11 +5,11 @@ For this project, we will be creating a web application for all the bibliophiles
   To create an application for users to view information related to books including author, publisher, plot summaries and critical reviews. Users can also review, rate and comment their views over corresponding book.
 
 # Team
-  ## Front-End
+## Front-End
   1. Manish Kumar Reddy Gangula
   2. Vaishali Unnikrishnan Latha
 
-  ## Back-End
+## Back-End
   1. Srikar Chowdary Kantamani
   2. Bhuvana Venkatesh
 
