@@ -21,5 +21,7 @@ func Starter() *mux.Router {
 
 	subRoute.HandleFunc("/addReviews", AddReviewsHandler()).Methods(http.MethodPost, http.MethodOptions)
 
+	subRoute.HandleFunc("/retrieveReviews", RetrieveReviewsHandler()).Methods(http.MethodGet, http.MethodOptions)
+
 	return subRoute
 }
