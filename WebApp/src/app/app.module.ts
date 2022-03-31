@@ -28,6 +28,10 @@ import { MyBooksComponent } from './my-books/my-books.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
+import { BookAttributesComponent } from './book-attributes/book-attributes.component';
+import { BookReviewsComponent } from './book-reviews/book-reviews.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { MatExpansionModule } from '@angular/material/expansion'
 
  @NgModule({
   declarations: [
@@ -37,7 +41,10 @@ import {MatCardModule} from '@angular/material/card';
     CommunityComponent,
     HomepageComponent,
     GenreBooksComponent,
-    MyBooksComponent
+    MyBooksComponent,
+    BookAttributesComponent,
+    BookReviewsComponent,
+    BookDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -63,6 +70,7 @@ import {MatCardModule} from '@angular/material/card';
     NgbModule,
     MatSnackBarModule,
     MatCardModule,
+    MatExpansionModule,
   ],
   exports: [ MatNativeDateModule,
     MatInputModule,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GenreDetailsModel } from '../models/general-models';
 @Component({
   selector: 'app-genre-books',
@@ -11,7 +11,8 @@ import { GenreDetailsModel } from '../models/general-models';
 
 export class GenreBooksComponent implements OnInit {
   books: GenreDetailsModel[] = [];
-  constructor(private api: AppService, private route: ActivatedRoute, public global: GlobalService) { 
+  constructor(private api: AppService, private route: ActivatedRoute, public global: GlobalService,
+              private router:Router) { 
 
   }
   description = "";
@@ -22,7 +23,10 @@ export class GenreBooksComponent implements OnInit {
   }
 
   showDescription(name: string) {
-    this.selectedbook = this.books.filter(x => x.Name == name)[0];
+    this.selectedbook = this.global.preGenreBooks.filter(x => x.Name == name)[0];
+  }
+  goToBookDetails(bookID: number){
+    this.router.navigate(['/book-details/'+ String(bookID)])
   }
 }
 
