@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
   }
 
   doLogin(){
-    console.log('Logging in');
     this.router.navigate(['/home']);
   }
 
@@ -38,7 +37,6 @@ export class LoginComponent implements OnInit {
   login() {
     if(this.email=="admin" && this.password=="admin"){
         this.snackBar.open('Login Successful','',{duration:2000})
-        console.log('Logging in');
         this.router.navigate(['/home']);
     }else{
       if(this.email==='' && this.password ===''){
