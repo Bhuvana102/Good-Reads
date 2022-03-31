@@ -3,11 +3,15 @@
     <h3>{{this.global.genreData.Name}}</h3>
     <p>{{this.global.genreData.Description}}</p>
     <h4>BOOKS TAGGED "{{this.global.genreData.Name}}"</h4>
-    <div class="wrapper">
-        <div *ngFor="let book of books">
+    <div class="wrapper" *ngIf="this.global.preGenreBooks.length>0">
+        <div *ngFor="let book of this.global.preGenreBooks">
             <img [src]="'/assets/images/'+book.ImageName+'.jpg'" [alt]="book.Name+' not found ' " [ngbTooltip]="tooltip"
                 (mouseover)="showDescription(book.Name)" [class.selected]="selectedbook?.Name===book.Name">
         </div>
+    </div>
+    <div   *ngIf="this.global.preGenreBooks.length<=0">
+        <mat-icon>no_backpack</mat-icon>
+        <div>No Books Found</div>
     </div>
     <hr>
 </div>

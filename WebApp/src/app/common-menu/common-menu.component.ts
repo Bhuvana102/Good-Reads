@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSnackBar, _SnackBarContainer } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { GenreModel } from '../models/general-models';
+import { GenreDetailsModel, GenreModel } from '../models/general-models';
 import { AppService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
 
@@ -18,7 +18,6 @@ export class CommonMenuComponent implements OnInit {
   opened: boolean = false;
   ngOnInit(): void {
     this.api.getGenres().subscribe((data: GenreModel[]) => {
-      console.log(data);
       this.genres = data;
     });
   }
@@ -31,10 +30,11 @@ export class CommonMenuComponent implements OnInit {
   goToGenre(genre: string) {
     this.opened = !this.opened;
     this.global.activePage = 'genre';
-    console.log(this.genres);
     this.global.genreData = this.genres.filter(genreItem => genreItem.Id === genre)[0];
-    console.log(this.global.genreData);
-    this.router.navigate(['/genre/' + String(genre)]);
+    this.api.getGenreDetails(String(genre)).subscribe((bookData: GenreDetailsModel[])=>{
+      this.global.preGenreBooks = bookData;
+      this.router.navigate(['/genre/' + String(genre)]);
+    })
   }
   goToMyBooks() {
     this.opened = !this.opened;

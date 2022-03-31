@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'goodReads';
   constructor(private router: Router) { 
-    console.log('app entered');
   }
 
   ngOnInit(): void {
