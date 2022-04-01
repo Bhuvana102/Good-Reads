@@ -13,7 +13,7 @@ func FetchBookRatingsHandler() http.HandlerFunc {
 		if r.Method == http.MethodGet {
 			fmt.Println("Fetching data for reqested Book ID:", r.URL.Query().Get("id"))
 			bId := r.URL.Query().Get("id")
-			data := model.FetchBookDataFunc(bId)
+			data := model.FetchBookRatingsFunc(bId)
 			w.WriteHeader(http.StatusOK)
 			json.NewEncoder(w).Encode(data)
 			// fmt.Println(data)

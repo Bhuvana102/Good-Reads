@@ -39,11 +39,10 @@ type Review struct {
 }
 
 type Ratings struct {
-	Ratings_Id uint  `gorm:"primaryKey"`
-	Book_Id    int32 `json:"book_id"`
-	Five       int32 `json:"five_stars"`
-	Four       int32 `json:"four_stars"`
-	Three      int32 `json:"three_stars"`
-	Two        int32 `json:"two_stars"`
-	One        int32 `json:"one_stars"`
+	Book_Id string `json:"book_id"`
+	Five    uint   `json:"five_stars"`
+	Four    uint   `json:"four_stars"`
+	Three   uint   `json:"three_stars"`
+	Two     uint   `json:"two_stars"`
+	One     uint   `json:"one_stars"`
 }
