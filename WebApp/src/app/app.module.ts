@@ -32,6 +32,7 @@ import { BookAttributesComponent } from './book-attributes/book-attributes.compo
 import { BookReviewsComponent } from './book-reviews/book-reviews.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { MatExpansionModule } from '@angular/material/expansion'
+import { MatGridListModule } from '@angular/material/grid-list'
 
  @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { MatExpansionModule } from '@angular/material/expansion'
     MatSnackBarModule,
     MatCardModule,
     MatExpansionModule,
+    MatGridListModule,
   ],
   exports: [ MatNativeDateModule,
     MatInputModule,
