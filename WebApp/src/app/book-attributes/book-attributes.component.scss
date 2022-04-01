@@ -1,8 +1,8 @@
 img {
     max-width: 250px;
     max-height: 300px;
-    margin-left: 500px;
-    margin-top: 50px;
+    // margin-left: 50px;
+    // margin-top: 50px;
     border: 2px solid transparent;
     border-radius: 20px;
     position: relative;
@@ -11,28 +11,38 @@ img {
 }
 
 .name {
-    margin-left: 705px;
+    margin-left: 215px;
     font-size: 30px;
     font-weight: bold;
-    margin-top: 100px;
+    margin-top: 45px;
 }
 
 .aname {
-    margin-left: 705px;
+    margin-left: 200px;
+    padding-left: 15px;
+    padding-top: 10px;
     font-size: large;
     font-style: italic;
     margin-top: 10px;
 }
 
 .pname {
-    margin-left: 705px;
+    margin-left: 200px;
+    padding-left: 15px;
     font-size: large;
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 30px;
 
 }
 
 .desc {
-    margin-left: 705px;
+    margin-left: 200px;
+    padding-left: 15px;
     margin-top: 10px;
+}
+
+.container {
+    position: relative;
+    padding-bottom: 200px;
+    border-color: black;
 }
