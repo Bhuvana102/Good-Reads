@@ -37,3 +37,13 @@ type Review struct {
 	Review        string `JSON:"Review"`
 	Reviewed_Date time.Time
 }
+
+type Ratings struct {
+	Ratings_Id uint  `gorm:"primaryKey"`
+	Book_Id    int32 `json:"book_id"`
+	Five       int32 `json:"five_stars"`
+	Four       int32 `json:"four_stars"`
+	Three      int32 `json:"three_stars"`
+	Two        int32 `json:"two_stars"`
+	One        int32 `json:"one_stars"`
+}
