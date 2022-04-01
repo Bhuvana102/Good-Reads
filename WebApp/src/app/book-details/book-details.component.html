@@ -9,26 +9,25 @@
   </mat-expansion-panel-header>
   <div>
     <div class="rating">
-    <div class="rate-title">Overall Rating</div>
-    <div style="display: inline-block; margin-left: 15px;">
-        <button mat-icon-button color="accent" 
-      *ngFor="let r of isRated; index as i" (click)="takeInputRating(i)">
-        <mat-icon> {{ markStar(i) }} </mat-icon>
-      </button>
-    </div>
+      <div class="rate-title">Overall Rating</div>
+      <div style="display: inline-block; margin-left: 15px;">
+        <button mat-icon-button color="accent" *ngFor="let r of isRated; index as i" (click)="takeInputRating(i)">
+          <mat-icon> {{ markStar(i) }} </mat-icon>
+        </button>
+      </div>
     </div>
     <div>
-        <div class="rate-title">Review</div>
-        <div>
-            <mat-form-field appearance="outline" class="txtareaField">
-                <textarea class="textarea" matInput placeholder="Input your Review" [(ngModel)]="enteredReview"></textarea>
-            </mat-form-field>
-        </div>
+      <div class="rate-title">Review</div>
+      <div>
+        <mat-form-field appearance="outline" class="txtareaField">
+          <textarea class="textarea" matInput placeholder="Input your Review" [(ngModel)]="enteredReview"></textarea>
+        </mat-form-field>
+      </div>
     </div>
   </div>
 
   <mat-action-row>
-      <button mat-button (click)="submitReview()">Submit</button>
-      <button mat-button (click)="clearReviewForm()">Clear</button>
+    <button mat-button (click)="submitReview()">Submit</button>
+    <button mat-button (click)="clearReviewForm()">Clear</button>
   </mat-action-row>
 </mat-expansion-panel>
