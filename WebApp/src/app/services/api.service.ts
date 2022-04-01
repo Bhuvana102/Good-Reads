@@ -25,11 +25,9 @@ export class ApiService {
   postReviewData(reviewData: ReviewPostData) {
     console.log(reviewData);
     const postheaders = new HttpHeaders()
-      .set('content-type', 'application/json')
-      .set('Access-Control-Allow-Origin', '*');
-    return this.http.post<any>(
+        return this.http.post<any>(
       'http://localhost:8080/api/addReviews',
-      reviewData, {headers: postheaders}
+      reviewData
     );
   }
 }
