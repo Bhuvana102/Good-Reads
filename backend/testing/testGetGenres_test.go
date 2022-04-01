@@ -12,7 +12,7 @@ import (
 
 func TestGetGenre(t *testing.T) {
 	model.Connect()
-	req, err := http.NewRequest("GET", "/getGenres/{5}", nil)
+	req, err := http.NewRequest("GET", "/getGenreForID?id=5", nil)
 	if err != nil {
 		t.Fatal(err)
 	}
