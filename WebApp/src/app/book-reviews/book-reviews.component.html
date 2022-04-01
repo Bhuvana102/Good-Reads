@@ -6,25 +6,31 @@
     fxLayoutGap="10px" 
     fxLayoutGap.xs="0">
   <div>
-    <mat-grid-list cols="2">
-            <mat-card class="card" *ngFor="let review of bookReviews">
-                <mat-card-title-group>
-                  <mat-card-title>{{review.Name}}</mat-card-title>
-                  <mat-card-subtitle>
-                    <div style="display: inline-block; margin-left: 15px;">
-                        <button mat-icon-button color="accent" 
-                      *ngFor="let r of [].constructor(5); index as i">
-                        <mat-icon> {{ markIndStar(i,review.rating) }} </mat-icon>
-                      </button>
-                    </div>
-                  </mat-card-subtitle>
-                  <label>hkadfkhdf</label>
-                  <!-- <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" > -->
-                </mat-card-title-group>
-                <mat-card-content>
-                  {{review.review}}
-                </mat-card-content>
-              </mat-card>
-    </mat-grid-list>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> View Reviews </mat-panel-title>
+          <mat-panel-description> </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-grid-list cols="2">
+        <mat-card class="card" *ngFor="let review of bookReviews">
+          <mat-card-title-group>
+            <mat-card-title class="rev-name">{{review.Name}}</mat-card-title>
+            <mat-card-subtitle>
+              <div style="display: inline-block; margin-left: 15px;">
+                  <button mat-icon-button color="accent" disabled="true"
+                *ngFor="let r of [].constructor(5); index as i">
+                  <mat-icon> {{ markIndStar(i,review.rating) }} </mat-icon>
+                </button>
+              </div>
+            </mat-card-subtitle>
+            <label>hkadfkhdf</label>
+            <!-- <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" > -->
+          </mat-card-title-group>
+          <mat-card-content>
+            {{review.review}}
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-list>
+      </mat-expansion-panel>
   </div>
 </div>
