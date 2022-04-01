@@ -50,11 +50,13 @@ export class BookDetailsComponent implements OnInit {
     }
     this.api.postReviewData(reviewData).subscribe((reviewReturnData)=>{
       console.log(reviewReturnData);
-
-      if(String(reviewReturnData).includes('%successfully%')){
-        console.log('includes');
-        this.snack.open('Review Posted successfully')
-      }
+      this.rating = 0;
+      this.enteredReview = ''
+      this.snack.open('Review Posted Successfully');
+      // if(String(reviewReturnData).includes('%successfully%')){
+      //   console.log('includes');
+      //   this.snack.open('Review Posted successfully')
+      // }
     })
   }
 }

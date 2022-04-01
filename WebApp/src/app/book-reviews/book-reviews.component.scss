@@ -1,5 +1,29 @@
+mat-expansion-panel{
+    margin-top: 20px;
+    border-color: black;
+    mat-expansion-panel-header{
+        font-weight: bold;
+        text-decoration: solid;
+        background-color: rgb(247, 114, 96);
+    }
+    mat-panel-title{
+        font-weight: bold;
+        font-size: large;
+        color: rgb(48, 36, 158);
+    }
+}
+
+mat-action-row{
+    button{
+        background-color: blue;
+        color: #FFFFFF;
+        border-radius: 20px !important;
+    }
+}
+
 .card {
     margin-bottom: 12px;
+    margin-top: 10px;
     display: block;
     border-color: purple;
 }
@@ -7,5 +31,10 @@
 .container {
     position: relative;
     padding-bottom: 20px;
-    margin-top: 200px;
+    border-color: black;
+}
+
+.rev-name{
+    font-size: large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }

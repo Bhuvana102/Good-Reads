@@ -2,6 +2,13 @@
 <app-book-attributes></app-book-attributes>
 <app-book-reviews></app-book-reviews>
 
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center"
+    fxLayoutGap="10px" 
+    fxLayoutGap.xs="0">
 <mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title> Provide a Review/Rating </mat-panel-title>
@@ -31,3 +38,4 @@
     <button mat-button (click)="clearReviewForm()">Clear</button>
   </mat-action-row>
 </mat-expansion-panel>
+</div>
