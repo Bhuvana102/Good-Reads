@@ -15,3 +15,10 @@ export interface GenreModel {
     CreatedAt:     Date;
     UpdatedAt:     Date;
 }
+
+export interface ReviewPostData{
+    Book_ID:string;
+    User_ID:string;
+    Rating:Number;
+    Review:string;
+}
