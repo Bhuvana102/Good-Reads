@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../services/api.service';
+import { ApiService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GenreDetailsModel } from '../models/general-models';
@@ -11,7 +11,7 @@ import { GenreDetailsModel } from '../models/general-models';
 
 export class GenreBooksComponent implements OnInit {
   books: GenreDetailsModel[] = [];
-  constructor(private api: AppService, private route: ActivatedRoute, public global: GlobalService,
+  constructor(private api: ApiService, private route: ActivatedRoute, public global: GlobalService,
               private router:Router) { 
 
   }
