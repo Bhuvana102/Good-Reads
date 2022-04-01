@@ -1,0 +1,38 @@
+img {
+    max-width: 250px;
+    max-height: 300px;
+    margin-left: 500px;
+    margin-top: 50px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    float: left;
+}
+
+.name {
+    margin-left: 705px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.aname {
+    margin-left: 705px;
+    font-size: large;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.pname {
+    margin-left: 705px;
+    font-size: large;
+    font-style: italic;
+    margin-top: 10px;
+
+}
+
+.desc {
+    margin-left: 705px;
+    margin-top: 10px;
+}
