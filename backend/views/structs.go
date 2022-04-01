@@ -37,3 +37,12 @@ type Review struct {
 	Review        string `JSON:"Review"`
 	Reviewed_Date time.Time
 }
+
+type Ratings struct {
+	Book_Id string `json:"book_id"`
+	Five    uint   `json:"five_stars"`
+	Four    uint   `json:"four_stars"`
+	Three   uint   `json:"three_stars"`
+	Two     uint   `json:"two_stars"`
+	One     uint   `json:"one_stars"`
+}
