@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { ReviewPostData } from '../models/general-models';
 import { ApiService } from '../services/api.service';
@@ -15,7 +16,8 @@ export class BookDetailsComponent implements OnInit {
   maxRating = 5;
   isRated: boolean[] = [];
   bookId:String = ''
-  constructor(private route: ActivatedRoute, private api: ApiService) { 
+  constructor(private route: ActivatedRoute, private api: ApiService,
+              private snack: MatSnackBar) { 
     this.isRated = Array(this.maxRating).fill(false);
     this.bookId = this.route.snapshot.params.id;
   }
@@ -48,6 +50,11 @@ export class BookDetailsComponent implements OnInit {
     }
     this.api.postReviewData(reviewData).subscribe((reviewReturnData)=>{
       console.log(reviewReturnData);
+
+      if(String(reviewReturnData).includes('%successfully%')){
+        console.log('includes');
+        this.snack.open('Review Posted successfully')
+      }
     })
   }
 }
