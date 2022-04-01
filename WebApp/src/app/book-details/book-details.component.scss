@@ -1,42 +1,46 @@
-mat-expansion-panel{
+mat-expansion-panel {
     margin-top: 20px;
-    mat-expansion-panel-header{
+
+    mat-expansion-panel-header {
         font-weight: bold;
         text-decoration: solid;
         background-color: rgb(221, 179, 152);
     }
-    mat-panel-title{
+
+    mat-panel-title {
         font-weight: bold;
         font-size: large;
         color: rgb(190, 43, 154);
     }
 }
 
-mat-action-row{
-    button{
+mat-action-row {
+    button {
         background-color: blue;
         color: #FFFFFF;
         border-radius: 20px !important;
     }
 }
 
-.txtareaField{
+.txtareaField {
     width: 500px;
 }
-.textarea{
+
+.textarea {
     // size: 100%;
     // font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.rating{
+.rating {
     display: inline-block;
 }
-.rate-title{
+
+.rate-title {
     display: inline-block;
     font-weight: bold;
     font-size: medium;
     font-style: normal;
-    margin-right:10em;
+    margin-right: 10em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

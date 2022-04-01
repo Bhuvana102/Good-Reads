@@ -1,3 +1,5 @@
-<p>book-attributes works!</p>
-{{selectedbook.Description}}
-{{selectedbook.ID}}
+<img [src]="'/assets/images/'+selectedbook.ImageName+'.jpg'" [alt]="selectedbook.Name+' not found ' " class="imgstyle">
+<div class="name">{{selectedbook.Name}}</div>
+<div class="aname">by {{selectedbook.AuthorName}}</div>
+<div class="pname">Pubished by {{selectedbook.PublisherName}}</div>
+<div class="desc">{{selectedbook.Description}}</div>
