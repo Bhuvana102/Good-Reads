@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import {
   GenreDetailsModel,
   GenreModel,
+  IndividualRatings,
+  ReviewModal,
   ReviewPostData,
 } from '../models/general-models';
 
@@ -20,6 +22,14 @@ export class ApiService {
     return this.http.get<GenreDetailsModel[]>(
       'http://localhost:8080/api/fetchGenreBooks?id=' + genreid
     );
+  }
+
+  getIndividualRating(bookid: string): Observable<IndividualRatings>{
+    return this.http.get<IndividualRatings>('http://localhost:8080/api/fetchBookRatings?id='+bookid)
+  }
+
+  getReviews(rMaxCount:number,bookid: string): Observable<ReviewModal[]>{
+    return this.http.get<ReviewModal[]>('http://localhost:8080/api/retrieveReviews?rindex='+String(rMaxCount)+'&BookID='+bookid);
   }
 
   postReviewData(reviewData: ReviewPostData) {

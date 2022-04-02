@@ -7,6 +7,7 @@ import { GenreDetailsModel, GenreModel } from '../models/general-models';
 export class GlobalService {
     public activePage=''
     public preGenreBooks: GenreDetailsModel[]=[]
+    public bookIDglb: string = '';
     genreData:GenreModel={
       Id: '',
       Name: '',

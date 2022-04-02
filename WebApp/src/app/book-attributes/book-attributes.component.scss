@@ -1,6 +1,6 @@
 img {
     max-width: 250px;
-    max-height: 300px;
+    max-height: 375px;
     // margin-left: 50px;
     // margin-top: 50px;
     border: 2px solid transparent;
@@ -11,14 +11,14 @@ img {
 }
 
 .name {
-    margin-left: 215px;
+    margin-left: 280px;
     font-size: 30px;
     font-weight: bold;
     margin-top: 45px;
 }
 
 .aname {
-    margin-left: 200px;
+    margin-left: 280px;
     padding-left: 15px;
     padding-top: 10px;
     font-size: large;
@@ -27,7 +27,7 @@ img {
 }
 
 .pname {
-    margin-left: 200px;
+    margin-left: 280px;
     padding-left: 15px;
     font-size: large;
     font-style: italic;
@@ -36,13 +36,26 @@ img {
 }
 
 .desc {
-    margin-left: 200px;
+    margin-left: 280px;
     padding-left: 15px;
     margin-top: 10px;
 }
 
 .container {
     position: relative;
-    padding-bottom: 200px;
+    padding-bottom: 30px;
     border-color: black;
+}
+
+.rating {
+    display: inline-block;
+}
+
+.rate-title {
+    display: inline-block;
+    font-weight: bold;
+    font-size: medium;
+    font-style: normal;
+    margin-right: 10em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
