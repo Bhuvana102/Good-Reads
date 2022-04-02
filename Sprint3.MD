@@ -53,7 +53,9 @@ http://localhost:8080/api/getBook?id=5
 ## 2. API to post book reviews
 
 Method Type: POST
-API will receive a POST request from the body in JSON format. This JSON is Decoded to a struct type Book and insert the values into database books.db books table as per the user's request.
+API will receive a POST request from the body in JSON format. This JSON is Decoded to a struct type Reviews and insert the values into database books.db books table as per the user's request.
+1. It will insert the review datas to Review table as and when any user writes Reviews about the book.
+2. It also calculates the review and ratin g count and increments it in the Book Table.
 
 Sample API usage via POSTMAN
 
@@ -65,10 +67,11 @@ After the insertion API will return values in JSON format of the information ins
 ## 3. API to fetch book reviews
 
 Method Type: GET
-API will receive a GET request from the body in JSON format. This JSON is Decoded to a struct type Book and insert the values into database books.db books table as per the user's request.
+API will receive a GET request from the body in JSON format. This JSON is Decoded to a struct type Review and insert the values into database books.db books table as per the user's request.
+This API returns top 10 the reviews for that particular BookID.
+And based on the Review-Index, it returns the next 10 revies starting from index number Review-index
 
 Sample API usage via POSTMAN
-
 
 ![Screenshot (41)](https://user-images.githubusercontent.com/97717233/161360074-5b062a90-e60d-470e-9c29-e47903eb88a8.png)
 
