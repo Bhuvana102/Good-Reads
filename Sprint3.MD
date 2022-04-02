@@ -58,7 +58,7 @@ API will receive a POST request from the body in JSON format. This JSON is Decod
 
 Sample API usage via POSTMAN
 
-![image](https://user-images.githubusercontent.com/61014960/152491281-6dc95cd0-635e-4994-87f8-e0f8d6e4a651.png)
+
 
 After the insertion API will return values in JSON format of the information inserted in DB and the ID generated for the book review.
 
@@ -108,7 +108,7 @@ Upon the user clicking a book from one of the genre pages, we will be redirected
 
 Sample Images:
 
-![Login](https://user-images.githubusercontent.com/92141914/156864595-97b3f14e-43c7-4b88-a94c-5834bbd2d66c.png)
+
 
 
 ## 2. Added book attributes component
@@ -117,7 +117,7 @@ This particular component is integrated to the book details page which is respon
 author name, publisher name, description of the book, etc.
 
 Sample Image:
-![home](https://user-images.githubusercontent.com/92141914/156864663-48193b77-e99f-4001-9074-36d043222354.png)
+
 
 
 ## 3. Added book reviews component
@@ -131,5 +131,5 @@ Sample Demo :
 
 Performed unit testing on the book details component.
 
-![Logout](https://user-images.githubusercontent.com/41356950/156865076-c0a2a5e4-c78f-4e80-96d4-51648906a841.png)
+
 
