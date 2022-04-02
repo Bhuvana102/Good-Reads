@@ -91,7 +91,7 @@ Sample API usage via POSTMAN
 
 We have given existing data in Database to test if the APIs are returning the expected data as per the request.
 
-![image](https://user-images.githubusercontent.com/61014960/156866328-a08ede8b-a182-4367-9cd9-8aa97f74ff03.png)
+
 
 # Front End
 
@@ -107,7 +107,7 @@ We have given existing data in Database to test if the APIs are returning the ex
 Upon the user clicking a book from one of the genre pages, we will be redirected to a details page which will display the individual books components.
 
 Sample Images:
-
+<img width="1440" alt="Screenshot 2022-04-01 at 9 09 07 PM" src="https://user-images.githubusercontent.com/92141914/161358692-5bea6bba-cea6-42a7-bfee-8e554fef7689.png">
 
 
 
@@ -117,6 +117,8 @@ This particular component is integrated to the book details page which is respon
 author name, publisher name, description of the book, etc.
 
 Sample Image:
+<img width="1137" alt="Screenshot 2022-04-01 at 9 11 01 PM" src="https://user-images.githubusercontent.com/92141914/161359253-1119d881-ff37-4d53-9123-9a2b205ca0c5.png">
+
 
 
 
@@ -125,11 +127,14 @@ Sample Image:
 The book details page is further extended to include displaying the reviews and ratings whenever a user clicks the book name from the genre page.
 
 Sample Demo :
+<img width="1440" alt="Screenshot 2022-04-01 at 9 19 08 PM" src="https://user-images.githubusercontent.com/92141914/161359874-09773f57-a2f6-4b26-aed1-c4dc91982829.png">
 
 
 ## 4. Cypress Integration Test for book details feature
 
 Performed unit testing on the book details component.
+<img width="1440" alt="Screenshot 2022-04-01 at 9 20 33 PM" src="https://user-images.githubusercontent.com/92141914/161359922-f792d1b2-c3b1-4c09-96ee-1e5d7488ea03.png">
+
 
 
 
