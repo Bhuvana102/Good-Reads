@@ -21,7 +21,9 @@ func AddReviewsHandler() http.HandlerFunc {
 				return
 			}
 			w.WriteHeader(http.StatusCreated)
+
 			json.NewEncoder(w).Encode(data)
+
 		}
 	}
 }
