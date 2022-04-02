@@ -52,4 +52,8 @@ func TestAddReviews(t *testing.T) {
 	fmt.Println("response Headers:", resp.Header)
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println("response Body:", string(body))
+
+	if body != nil {
+		fmt.Println("Data added successfully")
+	}
 }
