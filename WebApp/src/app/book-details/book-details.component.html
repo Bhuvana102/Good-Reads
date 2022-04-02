@@ -9,7 +9,7 @@
     fxLayoutAlign.gt-md="space-around center"
     fxLayoutGap="10px" 
     fxLayoutGap.xs="0">
-<mat-expansion-panel>
+<mat-expansion-panel id="postReview">
   <mat-expansion-panel-header>
     <mat-panel-title> Provide a Review/Rating </mat-panel-title>
     <mat-panel-description> </mat-panel-description>
@@ -27,14 +27,14 @@
       <div class="rate-title">Review</div>
       <div>
         <mat-form-field appearance="outline" class="txtareaField">
-          <textarea class="textarea" matInput placeholder="Input your Review" [(ngModel)]="enteredReview"></textarea>
+          <textarea class="textarea" matInput placeholder="Input your Review" [(ngModel)]="enteredReview" id="typeReview"></textarea>
         </mat-form-field>
       </div>
     </div>
   </div>
 
   <mat-action-row>
-    <button mat-button (click)="submitReview()">Submit</button>
+    <button mat-button (click)="submitReview()" id="submitReview">Submit</button>
     <button mat-button (click)="clearReviewForm()">Clear</button>
   </mat-action-row>
 </mat-expansion-panel>
