@@ -23,7 +23,7 @@ func TestGetBookRatings(t *testing.T) {
 		t.Errorf("handler returned wrong status code: got %v want %v",
 			status, http.StatusOK)
 	}
-	expected := `{"book_id":"7","five_stars":1,"four_stars":1,"three_stars":1,"two_stars":1,"one_stars":1}`
+	expected := `{"book_id":"7","five_stars":0,"four_stars":0,"three_stars":0,"two_stars":0,"one_stars":0}`
 	got := strings.TrimSpace(rr.Body.String())
 
 	if got != expected {
