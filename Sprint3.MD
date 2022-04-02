@@ -48,7 +48,6 @@ Sample API usage and Output
 
 http://localhost:8080/api/getBook?id=5
 
-![image](https://user-images.githubusercontent.com/61014960/156866162-7c2cec5c-28df-49c1-83e3-1813902854d3.png)
 
 
 ## 2. API to post book reviews
@@ -58,6 +57,7 @@ API will receive a POST request from the body in JSON format. This JSON is Decod
 
 Sample API usage via POSTMAN
 
+![image](https://user-images.githubusercontent.com/61014960/156866162-7c2cec5c-28df-49c1-83e3-1813902854d3.png)
 
 
 After the insertion API will return values in JSON format of the information inserted in DB and the ID generated for the book review.
@@ -68,6 +68,9 @@ Method Type: GET
 API will receive a GET request from the body in JSON format. This JSON is Decoded to a struct type Book and insert the values into database books.db books table as per the user's request.
 
 Sample API usage via POSTMAN
+
+
+![Screenshot (41)](https://user-images.githubusercontent.com/97717233/161360074-5b062a90-e60d-470e-9c29-e47903eb88a8.png)
 
 
 ## 4. API to add book reviews
@@ -106,10 +109,6 @@ We have given existing data in Database to test if the APIs are returning the ex
 
 Upon the user clicking a book from one of the genre pages, we will be redirected to a details page which will display the individual books components.
 
-Sample Images:
-<img width="1440" alt="Screenshot 2022-04-01 at 9 09 07 PM" src="https://user-images.githubusercontent.com/92141914/161358692-5bea6bba-cea6-42a7-bfee-8e554fef7689.png">
-
-
 
 ## 2. Added book attributes component
 
@@ -118,8 +117,6 @@ author name, publisher name, description of the book, etc.
 
 Sample Image:
 <img width="1137" alt="Screenshot 2022-04-01 at 9 11 01 PM" src="https://user-images.githubusercontent.com/92141914/161359253-1119d881-ff37-4d53-9123-9a2b205ca0c5.png">
-
-
 
 
 ## 3. Added book reviews component
