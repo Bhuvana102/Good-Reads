@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ReviewPostData } from '../models/general-models';
 import { ApiService } from '../services/api.service';
+import { GlobalService } from '../services/global.service';
 
 @Component({
   selector: 'app-book-details',
@@ -19,9 +20,9 @@ export class BookDetailsComponent implements OnInit {
   isRated: boolean[] = [];
   bookId:String = ''
   constructor(private route: ActivatedRoute, private api: ApiService,
-              private snack: MatSnackBar) { 
+              private snack: MatSnackBar, private global: GlobalService) { 
     this.isRated = Array(this.maxRating).fill(false);
-    this.bookId = this.route.snapshot.params.id;
+    this.bookId = this.global.bookIDglb =this.route.snapshot.params.id;
   }
   ngOnInit(): void {
   }

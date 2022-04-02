@@ -10,4 +10,54 @@
 <div class="aname">by {{selectedbook.AuthorName}}</div>
 <div class="pname">Pubished by {{selectedbook.PublisherName}}</div>
 <div class="desc">{{selectedbook.Description}}</div>
+<div>
+<div class="rating">
+    <div class="rate-title">5 Stars</div>
+    <div style="display: inline-block; margin-left: 15px;">
+      <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
+        <mat-icon> {{ markStar(this.ratingData.five_stars,i) }} </mat-icon>
+      </button>
+    </div>
+  </div>    
+</div>
+<div>
+  <div class="rating">
+    <div class="rate-title">4 Stars</div>
+    <div style="display: inline-block; margin-left: 15px;">
+      <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
+        <mat-icon> {{ markStar(this.ratingData.four_stars,i) }} </mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="rating">
+    <div class="rate-title">3 Stars</div>
+    <div style="display: inline-block; margin-left: 15px;">
+      <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
+        <mat-icon> {{ markStar(this.ratingData.three_stars,i) }} </mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="rating">
+    <div class="rate-title">2 Stars</div>
+    <div style="display: inline-block; margin-left: 15px;">
+      <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
+        <mat-icon> {{ markStar(this.ratingData.two_stars,i) }} </mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="rating">
+    <div class="rate-title">1 Stars</div>
+    <div style="display: inline-block; margin-left: 15px;">
+      <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
+        <mat-icon> {{ markStar(this.ratingData.one_stars,i) }} </mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
 </div>

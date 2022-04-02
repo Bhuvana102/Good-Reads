@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ReviewModal } from '../models/general-models';
+import { ApiService } from '../services/api.service';
+import { GlobalService } from '../services/global.service';
 
 @Component({
   selector: 'app-book-reviews',
@@ -7,15 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookReviewsComponent implements OnInit {
 
-  bookReviews=[
-    {Name: "Manish" ,rating:"4",review:"adfadf"},
-    {Name: "Srikar", rating:"2",review:"adfadasddfasfdf"}]
-  constructor() { }
+  bookReviews: ReviewModal[]=[]
+  constructor(private api: ApiService, private global: GlobalService) { 
+    this.api.getReviews(10,this.global.bookIDglb).subscribe((reviewData: ReviewModal[])=>{
+      console.log(reviewData);
+      this.bookReviews = reviewData;
+    })
+  }
 
   ngOnInit(): void {
   }
 
-  markIndStar(i: number,rating: string) {
+  markIndStar(i: number,rating: number) {
     if (Number(rating) >= i + 1) {
       return 'star';
     } else {
