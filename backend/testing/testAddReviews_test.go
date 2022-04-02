@@ -30,7 +30,7 @@ func TestAddReviews(t *testing.T) {
 
 	jsonbuf, _ := json.Marshal(cod)
 
-	req, err := http.NewRequest("POST", "/addReviews", bytes.NewBuffer(jsonbuf))
+	req, err := http.NewRequest("POST", "http://localhost:8080/api/addReviews", bytes.NewBuffer(jsonbuf))
 
 	if err != nil {
 		panic(err)
