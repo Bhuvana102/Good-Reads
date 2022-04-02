@@ -15,14 +15,15 @@ func AddReviewsHandler() http.HandlerFunc {
 		if r.Method == http.MethodPost {
 			data := views.Review{}
 			json.NewDecoder(r.Body).Decode(&data)
-			err := model.AddReviewFunc(data)
+			data, err := model.AddReviewFunc(data)
 			if err != nil {
 				w.Write([]byte("There is an error"))
 				return
 			}
 			w.WriteHeader(http.StatusCreated)
-		//	w.Write([]byte("Data inserted to DB successfully"))
-		//	json.NewEncoder(w).Encode(data)
+
+			json.NewEncoder(w).Encode(data)
+
 		}
 	}
 }
