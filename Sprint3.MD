@@ -34,8 +34,7 @@ The below API's are used to fetch the details from database and return it to the
 1. API to return Book Details by ID
 2. API to post book reviews
 3. API to fetch book reviews
-4. API to add book reviews
-5. API to fetch ratings of a book by ID
+4. API to fetch ratings of a book by ID
 6. Unit Test Cases for APIs
 
 
@@ -76,14 +75,7 @@ Sample API usage via POSTMAN
 ![Screenshot (41)](https://user-images.githubusercontent.com/97717233/161360074-5b062a90-e60d-470e-9c29-e47903eb88a8.png)
 
 
-## 4. API to add book reviews
-
-Method Type: GET
-API will receive a GET request from the body in JSON format. This JSON is Decoded to a struct type Book and insert the values into database books.db books table as per the user's request.
-
-Sample API usage via POSTMAN
-
-## 5. API to fetch ratings of a book by ID
+## 4. API to fetch ratings of a book by ID
 
 Method Type: GET
 API will receive a GET request from the body in JSON format. This JSON is Decoded to a struct type Book and insert the values into database books.db books table as per the user's request.
@@ -91,11 +83,14 @@ API will receive a GET request from the body in JSON format. This JSON is Decode
 Sample API usage via POSTMAN
 
 
-## 6. Unit Test Cases for APIs
+## 5. Unit Test Cases for APIs
 
 > `go test -v`
 
 We have given existing data in Database to test if the APIs are returning the expected data as per the request.
+
+![Screenshot (42)](https://user-images.githubusercontent.com/97717233/161366301-2794fc5f-4feb-4112-bea9-332355489e5f.png)
+
 
 
 
