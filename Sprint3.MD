@@ -57,7 +57,7 @@ API will receive a POST request from the body in JSON format. This JSON is Decod
 
 Sample API usage via POSTMAN
 
-![image](https://user-images.githubusercontent.com/61014960/156866162-7c2cec5c-28df-49c1-83e3-1813902854d3.png)
+![Screenshot (40)](https://user-images.githubusercontent.com/97717233/161360105-52ca4686-feb0-4eef-80f7-587788e81411.png)
 
 
 After the insertion API will return values in JSON format of the information inserted in DB and the ID generated for the book review.
