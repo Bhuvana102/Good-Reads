@@ -23,3 +23,12 @@ First the localhost:4200 will start upon ng serve and then a new tab for cypress
 > Sprint 3 - https://github.com/Bhuvana102/Good-Reads/projects/4
 
 > Sprint 4 - https://github.com/Bhuvana102/Good-Reads/projects/5
+
+# Team
+## Front-End
+  1. Manish Kumar Reddy Gangula
+  2. Vaishali Unnikrishnan Latha
+
+## Back-End
+  1. Srikar Chowdary Kantamani
+  2. Bhuvana Venkatesh
