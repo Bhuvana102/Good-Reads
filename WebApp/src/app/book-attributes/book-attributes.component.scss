@@ -54,14 +54,18 @@ img {
 }
 
 .rating {
-    display: inline-block;
+    //display: inline-block;
+    margin-left: 280px;
+    padding-left: 15px;
+    margin-top: 3em;
 }
 
 .rate-title {
-    display: inline-block;
+  //  display: inline-block;
     font-weight: bold;
     font-size: medium;
     font-style: normal;
     margin-right: 10em;
+  
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -5,15 +5,19 @@ export interface GenreModel {
   }
 
   export interface GenreDetailsModel {
-    ID:            number;
-    Name:          string;
-    Description:   string;
-    AuthorName:    string;
-    GenreId:       number;
-    PublisherName: string;
-    ImageName:     string;
-    CreatedAt:     Date;
-    UpdatedAt:     Date;
+    ID:             number;
+    Name:           string;
+    Description:    string;
+    AuthorName:     string;
+    GenreId:        number;
+    PublisherName:  string;
+    ImageName:      string;
+    PublishedYear?: string;
+    AvgRating:      number;
+    NoOfRatings:    number;
+    NoOfReviews:    number;
+    CreatedAt:      Date;
+    UpdatedAt:      Date;
 }
 
 export interface ReviewPostData{
