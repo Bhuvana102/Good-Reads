@@ -22,16 +22,28 @@ export class BookAttributesComponent implements OnInit {
   constructor(private api: ApiService, private route: ActivatedRoute, public global: GlobalService,
     private router: Router) {
     this.bookId = this.route.snapshot.params.id;
-    this.api.getIndividualRating(this.bookId).subscribe((rateData: IndividualRatings)=>{
+    this.api.getIndividualRating(this.bookId).subscribe((rateData: IndividualRatings) => {
       this.global.glbRating = rateData;
     })
   }
 
   ngOnInit(): void {
-    this.api.getGenreDetails(String(localStorage.getItem('genreId'))).subscribe((bookData: GenreDetailsModel[])=>{
+    this.api.getGenreDetails(String(localStorage.getItem('genreId'))).subscribe((bookData: GenreDetailsModel[]) => {
       this.global.preGenreBooks = bookData;
       this.selectedbook = this.global.preGenreBooks.filter(x => x.ID == this.bookId)[0];
     })
+  }
+  AddToMyBooks(selectedbook: any) {
+    let mybooks = JSON.parse(sessionStorage.getItem("mybooks"));
+    if (mybooks) {
+      if (mybooks.findIndex(x => x.ID === selectedbook.ID) < 0) {
+        mybooks.push(selectedbook);
+      }
+    } else {
+      mybooks = [];
+      mybooks.push(selectedbook);
+    }
+    sessionStorage.setItem("mybooks", JSON.stringify(mybooks));
   }
 
   markStar(indrating: number, i: number) {
