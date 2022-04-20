@@ -33,7 +33,7 @@ export class CommonMenuComponent implements OnInit {
     this.global.activePage = 'genre';
     this.global.genreData = this.genres.filter(genreItem => genreItem.Id === genre)[0];
     this.api.getGenreDetails(String(genre)).subscribe((bookData: GenreDetailsModel[])=>{
-      localStorage.setItem('genreId', genre)
+      localStorage.setItem('genreId', genre);
       this.global.preGenreBooks = bookData;
       this.router.navigate(['/genre/' + String(genre)]);
     })

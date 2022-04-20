@@ -31,6 +31,7 @@ export class BookAttributesComponent implements OnInit {
     this.api.getGenreDetails(String(localStorage.getItem('genreId'))).subscribe((bookData: GenreDetailsModel[]) => {
       this.global.preGenreBooks = bookData;
       this.selectedbook = this.global.preGenreBooks.filter(x => x.ID == this.bookId)[0];
+      localStorage.setItem('averageRating',this.selectedbook.AvgRating);
     })
   }
   AddToMyBooks(selectedbook: any) {
@@ -53,5 +54,7 @@ export class BookAttributesComponent implements OnInit {
       return 'star_border';
     }
   }
-
+  getAverageRating(){
+    return Number(localStorage.getItem('averageRating'));
+  }
 }

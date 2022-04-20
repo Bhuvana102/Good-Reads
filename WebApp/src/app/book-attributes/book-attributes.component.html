@@ -10,15 +10,15 @@
   <div class="desc">{{selectedbook.Description}}</div>
   <div>
     <div class="rating">
-      <div class="rate-title">5 Stars</div>
+      <div class="rate-title">Average Rating</div>
       <div style="display: inline-block; margin-left: 15px;">
         <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
-          <mat-icon> {{ markStar(this.global.glbRating.five_stars,i) }} </mat-icon>
+          <mat-icon> {{ markStar(this.getAverageRating(),i) }} </mat-icon>
         </button>
       </div>
     </div>
   </div>
-  <div>
+  <!-- <div>
     <div class="rating">
       <div class="rate-title">4 Stars</div>
       <div style="display: inline-block; margin-left: 15px;">
@@ -57,5 +57,5 @@
         </button>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

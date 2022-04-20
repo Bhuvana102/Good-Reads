@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { IndividualRatings, ReviewModal, ReviewPostData } from '../models/general-models';
+import { GenreDetailsModel, IndividualRatings, ReviewModal, ReviewPostData } from '../models/general-models';
 import { ApiService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
 import { BookAttributesComponent } from '../book-attributes/book-attributes.component';
@@ -56,6 +56,11 @@ export class BookDetailsComponent implements OnInit {
     this.api.getIndividualRating(this.bookId).subscribe((rateData: IndividualRatings)=>{
       this.global.glbRating = rateData;
     });
+    this.api.getGenreDetails(String(localStorage.getItem('genreId'))).subscribe((bookData: GenreDetailsModel[]) => {
+      this.global.preGenreBooks = bookData;
+      let selectedbook = this.global.preGenreBooks.filter(x => x.ID == Number(this.bookId))[0];
+      localStorage.setItem('averageRating',String(selectedbook.AvgRating));
+    })
   }
   submitReview(){
     let reviewData:ReviewPostData = {
