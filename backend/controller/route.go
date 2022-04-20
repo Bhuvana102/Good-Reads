@@ -15,7 +15,7 @@ func Starter() *mux.Router {
 
 	subRoute.HandleFunc("/fetchGenreBooks", FetchGenreBooksHandler()).Methods(http.MethodGet, http.MethodOptions)
 
-	subRoute.HandleFunc("/fetchTop5BooksForGenre", FetchGenreBooksHandler()).Methods(http.MethodGet, http.MethodOptions)
+	subRoute.HandleFunc("/fetchTopBooksForGenre", FetchGenreBooksHandler()).Methods(http.MethodGet, http.MethodOptions)
 
 	subRoute.HandleFunc("/insertBook", InsertBookHandler()).Methods(http.MethodPost, http.MethodOptions)
 
