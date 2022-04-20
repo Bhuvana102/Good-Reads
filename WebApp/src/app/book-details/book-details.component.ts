@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { ReviewPostData } from '../models/general-models';
+import { IndividualRatings, ReviewModal, ReviewPostData } from '../models/general-models';
 import { ApiService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
+import { BookAttributesComponent } from '../book-attributes/book-attributes.component';
+import { BookReviewsComponent } from '../book-reviews/book-reviews.component';
 
 @Component({
   selector: 'app-book-details',
@@ -18,15 +20,16 @@ export class BookDetailsComponent implements OnInit {
   subs: Subscription | undefined
   maxRating = 5;
   isRated: boolean[] = [];
-  bookId:String = ''
-  constructor(private route: ActivatedRoute, private api: ApiService,
-              private snack: MatSnackBar, private global: GlobalService) { 
+  bookId:string = ''
+  constructor(private route: ActivatedRoute, private api: ApiService, private router: Router,
+              private snack: MatSnackBar, private global: GlobalService, 
+              private attr: BookAttributesComponent, private bkr: BookReviewsComponent) { 
     this.isRated = Array(this.maxRating).fill(false);
     this.bookId = this.global.bookIDglb =this.route.snapshot.params.id;
+    console.log(this.bookId);
   }
   ngOnInit(): void {
   }
-
   markStar(i: number) {
     if (this.rating >= i + 1) {
       return 'star';
@@ -44,6 +47,16 @@ export class BookDetailsComponent implements OnInit {
     this.enteredReview = ''
   }
 
+  updateReviews(){
+    this.api.getReviews(10,this.global.bookIDglb).subscribe((reviewData: ReviewModal[])=>{
+      this.global.glbReviews = reviewData;
+    })
+  }
+  updateAverageRating(){
+    this.api.getIndividualRating(this.bookId).subscribe((rateData: IndividualRatings)=>{
+      this.global.glbRating = rateData;
+    });
+  }
   submitReview(){
     let reviewData:ReviewPostData = {
         "Book_ID": String(this.bookId),
@@ -56,6 +69,9 @@ export class BookDetailsComponent implements OnInit {
         this.rating = 0;
         this.enteredReview = ''
         this.snack.open('Review Posted Successfully','',{duration:2000});
+        this.updateAverageRating();
+        this.updateReviews();
+        // this.router.navigateByUrl('/book-details/'+ String(this.bookId),{skipLocationChange:false})
         this.subs?.unsubscribe();
       }
     }) 

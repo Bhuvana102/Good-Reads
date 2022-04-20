@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { ReviewModal } from '../models/general-models';
 import { ApiService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
@@ -8,13 +8,17 @@ import { GlobalService } from '../services/global.service';
   templateUrl: './book-reviews.component.html',
   styleUrls: ['./book-reviews.component.scss']
 })
+
+@Injectable({
+  providedIn: 'root'
+})
+
 export class BookReviewsComponent implements OnInit {
 
-  bookReviews: ReviewModal[]=[]
-  constructor(private api: ApiService, private global: GlobalService) { 
+  constructor(private api: ApiService, public global: GlobalService) { 
     this.api.getReviews(10,this.global.bookIDglb).subscribe((reviewData: ReviewModal[])=>{
       console.log(reviewData);
-      this.bookReviews = reviewData;
+      this.global.glbReviews = reviewData;
     })
   }
 
