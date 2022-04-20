@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class MyBooksComponent implements OnInit {
 
   constructor() { }
+  mybooks: any;
 
   ngOnInit(): void {
+    let a = sessionStorage.getItem("mybooks")
+    this.mybooks = JSON.parse(a)
   }
 
 }
