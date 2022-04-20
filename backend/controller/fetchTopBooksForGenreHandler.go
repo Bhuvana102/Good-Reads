@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func FetchTop5BooksForGenreHandler() http.HandlerFunc {
+func FetchTopBooksForGenreHandler() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 		if r.Method == http.MethodGet {
