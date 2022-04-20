@@ -13,10 +13,9 @@ func FetchTopBooksForGenreHandler() http.HandlerFunc {
 		if r.Method == http.MethodGet {
 			fmt.Println("Fetching top Books for reqested Genre ID:", r.URL.Query().Get("id"))
 			gId := r.URL.Query().Get("id")
-			data := model.FetchBookRatingsFunc(gId)
+			data := model.FetchTopBooksForGenreHandler(gId, 5)
 			w.WriteHeader(http.StatusOK)
 			json.NewEncoder(w).Encode(data)
-			// fmt.Println(data)
 		}
 	}
 }
