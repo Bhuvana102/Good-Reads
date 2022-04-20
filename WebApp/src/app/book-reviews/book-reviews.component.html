@@ -12,7 +12,7 @@
           <mat-panel-description> </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-grid-list cols="2">
-        <mat-card class="card" *ngFor="let review of bookReviews">
+        <mat-card class="card" *ngFor="let review of this.global.glbReviews">
           <mat-card-title-group>
             <mat-card-title class="rev-name">{{review.User_ID}}</mat-card-title>
             <mat-card-subtitle>
@@ -23,7 +23,7 @@
                 </button>
               </div>
             </mat-card-subtitle>
-            <label>hkadfkhdf</label>
+            <!-- <label>hkadfkhdf</label> -->
             <!-- <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" > -->
           </mat-card-title-group>
           <mat-card-content>
