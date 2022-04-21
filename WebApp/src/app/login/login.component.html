@@ -26,17 +26,18 @@
               <button mat-button color="primary" id="loginBtn" (click)="login()">Login</button>
             </mat-tab>
             <mat-tab label="Register">
+
               <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
                 <input type="email" id="regEmail" matInput placeholder="Email" value="" [(ngModel)]="remail"
-                (focusout)="onEmailFocusOut()" required ng-pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+                (focusout)="onEmailFocusOut(this.remail)" required>
                 <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
     
               <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
                 <input type="password" #regPassword matInput placeholder="Password" [(ngModel)]="rpassword" 
-                (focusout)="onPasswordFocusOut()" required>
+                (focusout)="onPasswordFocusOut(this.rpassword)" required>
                 <mat-icon matSuffix>vpn_key</mat-icon>
               </mat-form-field>
               <mat-form-field class="example-full-width">

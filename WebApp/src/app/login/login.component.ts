@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit {
   remail:string='';
   rpassword:string='';
   rcpassword:string='';
+  rFirstName: string = '';
+  rLastName:string='';
   emailRegex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
   passwordRegex = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
   constructor(private router: Router, private snackBar:MatSnackBar) { 
@@ -28,22 +30,22 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onEmailFocusOut(){
-    if(this.remail===''){
+  onEmailFocusOut(emailId){
+    if(emailId===''){
       this.snackBar.open("Email Cannot be Empty",'',{duration:1000});
     }
-    else if(!this.emailRegex.test(this.remail)){
+    else if(!this.emailRegex.test(emailId)){
       this.snackBar.open("Enter Valid Email",'',{duration:1000})
     }
     else{
       return true
     }
   }
-  onPasswordFocusOut(){
-    if(this.rpassword===''){
+  onPasswordFocusOut(pswd){
+    if(pswd===''){
       this.snackBar.open("Password Cannot be Blank",'',{duration:1000});
     }
-    else if(!this.passwordRegex.test(this.rpassword)){
+    else if(!this.passwordRegex.test(pswd)){
       this.snackBar.open("Enter Valid Password",'',{duration:3000});
     }
     else{
@@ -67,10 +69,12 @@ export class LoginComponent implements OnInit {
   }
 
   register() {
-    if(!this.onEmailFocusOut()) return
-    else if(!this.onPasswordFocusOut()) return
+    if(!this.onEmailFocusOut(this.remail)) return
+    else if(!this.onPasswordFocusOut(this.rpassword)) return
     else if(!this.onConfPasswordFocusOut()) return
-    else console.log('test')
+    else {
+      console.log(btoa(this.rpassword));
+    }
   }
   login() {
     if(this.email=="admin" && this.password=="admin"){
