@@ -38,7 +38,11 @@ First the localhost:4200 will start upon ng serve and then a new tab for cypress
 # Sprint 2 Demo Run
 
 Run Backend :
+Main :
 ![Running-the-code](https://user-images.githubusercontent.com/97717233/152629613-ff8847d5-6d0e-4dfb-ae27-daa01fbb36d6.gif)
+
+Test-Cases :
+
 
 Run FrontEnd :
 
@@ -51,17 +55,16 @@ Run BackEndTestSrcipts : `go test -v`
 # Backend
 API :: 
 The below API's are used to fetch the details from database and return it to the calling API so that data in FRONTEND can be rendered based on the data stored in BACKEND
-1. API to return Book Details by ID
-2. API to post book reviews
-3. API to fetch book reviews
-4. API to fetch ratings of a book by ID
-6. Unit Test Cases for APIs
+1. API to Fetch the Top 5 books for a Given Genre
+2.
+3.. Unit Test Cases for APIs
 
 
-The Postman commands and sample examples can be viewed here : https://documenter.getpostman.com/view/19432934/UVeGqRHi  
+The Postman commands and sample examples can be viewed here :
+https://documenter.getpostman.com/view/19432934/UVeGqRHi  
 
-## 1. API to return Book Details by ID
-The /api/getBook API is used to fetch a particular Book by its ID as requested from the frontend Webpage.
+## 1. API to Fetch the Top 5 books for a Given Genre
+The /fetchTopBooksForGenre?id=5 API is used to fetch the top 5 Genres
 
 Sample API usage and Output
 
@@ -109,6 +112,7 @@ Sample API usage via POSTMAN
 
 We have given existing data in Database to test if the APIs are returning the expected data as per the request.
 
-![Screenshot (42)](https://user-images.githubusercontent.com/97717233/161366301-2794fc5f-4feb-4112-bea9-332355489e5f.png)
+![Screenshot (44)](https://user-images.githubusercontent.com/97717233/164353099-9af4e147-74d0-4310-a619-b321ea5f966a.png)
+
 
 
