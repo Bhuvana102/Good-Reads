@@ -49,6 +49,8 @@ type Ratings struct {
 
 type User struct {
 	ID        uint   `gorm:"primarykey"`
+	FirstName string `gorm:"firstname"`
+	LastName  string `json:"lastname"`
 	Username  string `json:"username"`
 	Password  string `json:"password"`
 	Mobile    string `json:"mobile"`
