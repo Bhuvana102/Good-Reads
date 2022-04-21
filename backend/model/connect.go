@@ -52,6 +52,7 @@ func Connect() *gorm.DB {
 	db.AutoMigrate(&views.Genres{})
 	db.AutoMigrate(&views.Book{})
 	db.AutoMigrate((&views.Review{}))
+	db.AutoMigrate(&views.User{})
 	DB = db
 	add_genresdb()
 	return DB
