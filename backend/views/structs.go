@@ -53,7 +53,6 @@ type User struct {
 	LastName  string `json:"lastname"`
 	Username  string `json:"username"`
 	Password  string `json:"password"`
-	Mobile    string `json:"mobile"`
 	Email     string `json:"email"`
 	CreatedAt time.Time
 	UpdatedAt time.Time
