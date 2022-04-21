@@ -26,7 +26,19 @@
               <button mat-button color="primary" id="loginBtn" (click)="login()">Login</button>
             </mat-tab>
             <mat-tab label="Register">
+              <mat-form-field class="example-full-width">
+                <mat-label>First Name</mat-label>
+                <input type="text" id="regFirstName" matInput placeholder="FirstName" value="" [(ngModel)]="rFirstName"
+                required>
+                <mat-icon matSuffix>contacts</mat-icon>
+              </mat-form-field>
 
+              <mat-form-field class="example-full-width">
+                <mat-label>Last Name</mat-label>
+                <input type="text" id="regLastName" matInput placeholder="LastName" value="" [(ngModel)]="rLastName"
+                required>
+                <mat-icon matSuffix>trip_origin</mat-icon>
+              </mat-form-field>
               <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
                 <input type="email" id="regEmail" matInput placeholder="Email" value="" [(ngModel)]="remail"
