@@ -46,3 +46,13 @@ type Ratings struct {
 	Two     uint   `json:"two_stars"`
 	One     uint   `json:"one_stars"`
 }
+
+type User struct {
+	ID        uint   `gorm:"primarykey"`
+	Username  string `json:"username"`
+	Password  string `json:"password"`
+	Mobile    string `json:"mobile"`
+	Email     string `json:"email"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
+}
