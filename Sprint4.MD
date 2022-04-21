@@ -71,6 +71,7 @@ http://localhost:8080/api/fetchTopBooksForGenre?id=5
 
 ![Screenshot (46)](https://user-images.githubusercontent.com/97717233/164354684-24c9ba6c-e80e-41c0-929e-3ba46cd3cc0e.png)
 
+![Postman 2022-04-20 21-37-43](https://user-images.githubusercontent.com/97717233/164355061-94613c3e-c498-4f31-9670-fe8e87ad50ec.gif)
 
 
 ## 2. API to post book reviews
