@@ -26,20 +26,24 @@
               <button mat-button color="primary" id="loginBtn" (click)="login()">Login</button>
             </mat-tab>
             <mat-tab label="Register">
+
               <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
-                <input type="email" id="regEmail" matInput placeholder="Email" value="" [(ngModel)]="remail">
+                <input type="email" id="regEmail" matInput placeholder="Email" value="" [(ngModel)]="remail"
+                (focusout)="onEmailFocusOut(this.remail)" required>
                 <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
     
               <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
-                <input type="password" #regPassword matInput placeholder="Password" [(ngModel)]="rpassword">
+                <input type="password" #regPassword matInput placeholder="Password" [(ngModel)]="rpassword" 
+                (focusout)="onPasswordFocusOut(this.rpassword)" required>
                 <mat-icon matSuffix>vpn_key</mat-icon>
               </mat-form-field>
               <mat-form-field class="example-full-width">
-                <mat-label>Password</mat-label>
-                <input type="password" matInput placeholder="Password" [(ngModel)]="rcpassword">
+                <mat-label>Confirm Password</mat-label>
+                <input type="password" matInput placeholder="Confirm Password" [(ngModel)]="rcpassword" 
+                (focusout)="onConfPasswordFocusOut()"required>
                 <mat-icon matSuffix>vpn_key</mat-icon>
               </mat-form-field>
               <button mat-button color="primary" (click)="register()">Register</button>
