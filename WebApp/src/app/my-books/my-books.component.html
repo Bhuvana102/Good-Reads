@@ -1,8 +1,10 @@
 <app-common-menu></app-common-menu>
 <div *ngFor="let book of mybooks" class="maindiv">
-    <img [src]="'/assets/images/'+book.ImageName+'.jpg'" id="{{book.ImageName}}" class="imgname">
-    <li>
 
-        <a [routerLink]="'/book-details/'+book.ID" class="imgdesc">{{book.Name}}</a>
-    </li>
+
+    <a [routerLink]="'/book-details/'+book.ID">
+        <img [src]="'/assets/images/'+book.ImageName+'.jpg'" id="{{book.ImageName}}" class="imgname">
+    </a>
+    <!--<a [routerLink]="'/book-details/'+book.ID" class="imgdesc">{{book.Name}}</a>-->
+
 </div>
