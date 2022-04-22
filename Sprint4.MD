@@ -104,4 +104,53 @@ We have given existing data in Database to test if the APIs are returning the ex
 ![Screenshot (44)](https://user-images.githubusercontent.com/97717233/164353099-9af4e147-74d0-4310-a619-b321ea5f966a.png)
 
 
+# Front End
+
+- The below modules are created as part of Sprint 3 - UI in Good Reads Web Application
+1. Added my books page.
+2. Implemented user authentication.
+4. Changed ratings to average ratings.
+5. Added dynamic updating feature for reviews.
+ 
+## 1. Added my books page.
+
+This page will list all the books a user has added to his wish-list.
+
+<img width="1440" alt="Screenshot 2022-04-22 at 2 56 46 AM" src="https://user-images.githubusercontent.com/92141914/164620855-994ba277-e3c6-45d2-a2bb-4a3ee239c49d.png">
+
+
+## 2. Implemented user authentication
+
+Created an interface where users can register themselves to the application. 
+The registered user can access their respective account with their email id and password. Passwords are end-to-end encrypted.
+
+Sample Image:
+1)Registration
+![Registration](https://user-images.githubusercontent.com/92141914/164620973-93c77d05-1133-4b99-8cb0-75889510863b.png)
+
+2)Login
+
+<img width="1440" alt="Screenshot 2022-04-22 at 2 59 43 AM" src="https://user-images.githubusercontent.com/92141914/164621563-0cd03ec8-13c8-4418-baaf-47bd641da71e.png">
+
+
+## 3. Changed ratings to average ratings.
+
+Based on the user input reviews and ratings, we will compute the average ratings for a particular book and map it to the corresponding book upon selection by user.
+
+Sample Image :
+
+<img width="1440" alt="Screenshot 2022-04-22 at 3 00 12 AM" src="https://user-images.githubusercontent.com/92141914/164621742-825ecd10-da8f-4440-8a6e-8482550ae423.png">
+
+
+## 4.Added dynamic updating feature for reviews.
+
+We updated the review posting feature to take him immediate effect and display reviews as and when it is posted.
+
+Sample Demo:
+
+
+
+
+
+
 
