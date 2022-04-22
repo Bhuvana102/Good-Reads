@@ -16,7 +16,7 @@ import { GlobalService } from '../services/global.service';
 export class BookReviewsComponent implements OnInit {
 
   constructor(private api: ApiService, public global: GlobalService) { 
-    this.api.getReviews(10,this.global.bookIDglb).subscribe((reviewData: ReviewModal[])=>{
+    this.api.getReviews(20,localStorage.getItem('selectedBookId')).subscribe((reviewData: ReviewModal[])=>{
       console.log(reviewData);
       this.global.glbReviews = reviewData;
     })

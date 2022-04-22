@@ -26,7 +26,11 @@ export class BookDetailsComponent implements OnInit {
               private attr: BookAttributesComponent, private bkr: BookReviewsComponent) { 
     this.isRated = Array(this.maxRating).fill(false);
     this.bookId = this.global.bookIDglb =this.route.snapshot.params.id;
+    localStorage.setItem('selectedBookId', this.bookId);
     console.log(this.bookId);
+    this.router.routeReuseStrategy.shouldReuseRoute = function() {
+      return false;
+    };
   }
   ngOnInit(): void {
   }
@@ -48,7 +52,7 @@ export class BookDetailsComponent implements OnInit {
   }
 
   updateReviews(){
-    this.api.getReviews(10,this.global.bookIDglb).subscribe((reviewData: ReviewModal[])=>{
+    this.api.getReviews(20,localStorage.getItem('selectedBookId')).subscribe((reviewData: ReviewModal[])=>{
       this.global.glbReviews = reviewData;
     })
   }

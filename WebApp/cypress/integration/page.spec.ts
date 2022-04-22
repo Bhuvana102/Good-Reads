@@ -2,8 +2,8 @@ import * as cypress from "cypress";
 describe('Our genre browse', () => {
     beforeEach("Login Input with valid credentials", () => {
         cy.visit('/login');
-        cy.get("#loginId").type("admin");
-        cy.get("#loginPassword").type("admin");
+        cy.get("#loginId").type("Test1@gmail.com");
+        cy.get("#loginPassword").type("Test1@123");
         cy.get("#loginBtn").click();
         cy.get('#side-menu').click();
         cy.get('#side-menu-browse').click();
