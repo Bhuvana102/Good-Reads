@@ -106,30 +106,32 @@ export class LoginComponent implements OnInit {
     return userData;
   }
   login() {
-    // const loginData = {
-    //   email: this.email,
-    //   password: btoa(this.password)
+    const loginData = {
+      email: this.email,
+      password: btoa(this.password)
+    }
+    this.api.loginAuth(loginData).subscribe((data: LoginModal[])=>{
+      console.log(data);
+    },(error)=>{
+      console.error('error caught in component' + JSON.parse(error));
+    })
+    // if(this.email=="admin" && this.password=="admin"){
+    //     this.snackBar.open('Login Successful','',{duration:2000})
+    //     this.router.navigate(['/home']);
     // }
-    // this.api.loginAuth(loginData).subscribe((data: LoginModal[])=>{
-    //   console.log(data);
-    // })
-    if(this.email=="admin" && this.password=="admin"){
-        this.snackBar.open('Login Successful','',{duration:2000})
-        this.router.navigate(['/home']);
-    }
-    else{
-      if(this.email==='' && this.password ===''){
-        this.snackBar.open('Please enter Credentials to continue','',{duration:2000})
-      }
-      else if(this.email===''){
-        this.snackBar.open('Please enter Login Id','',{duration:2000})
-      }
-      else if(this.password===''){
-        this.snackBar.open('Please enter a password','',{duration:2000})
-      }
-      else{
-        this.snackBar.open('Invalid Login Id or Password','',{duration:2000})
-      }
-    }
+    // else{
+    //   if(this.email==='' && this.password ===''){
+    //     this.snackBar.open('Please enter Credentials to continue','',{duration:2000})
+    //   }
+    //   else if(this.email===''){
+    //     this.snackBar.open('Please enter Login Id','',{duration:2000})
+    //   }
+    //   else if(this.password===''){
+    //     this.snackBar.open('Please enter a password','',{duration:2000})
+    //   }
+    //   else{
+    //     this.snackBar.open('Invalid Login Id or Password','',{duration:2000})
+    //   }
+    // }
   }
 }
