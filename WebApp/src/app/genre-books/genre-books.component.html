@@ -6,10 +6,11 @@
     <div class="wrapper" *ngIf="this.global.preGenreBooks.length>0">
         <div *ngFor="let book of this.global.preGenreBooks">
             <img [src]="'/assets/images/'+book.ImageName+'.jpg'" [alt]="book.Name+' not found ' " [ngbTooltip]="tooltip"
-                (mouseover)="showDescription(book.Name)" id="{{book.ImageName}}" [class.selected]="selectedbook?.Name===book.Name" (click)="goToBookDetails(book.ID)">
+                (mouseover)="showDescription(book.Name)" id="{{book.ImageName}}"
+                [class.selected]="selectedbook?.Name===book.Name" (click)="goToBookDetails(book.ID)">
         </div>
     </div>
-    <div   *ngIf="this.global.preGenreBooks.length<=0">
+    <div *ngIf="this.global.preGenreBooks.length<=0">
         <mat-icon>no_backpack</mat-icon>
         <div>No Books Found</div>
     </div>
@@ -17,7 +18,8 @@
 </div>
 <ng-template #tooltip>
     <div class="bookDesc">
-        {{selectedbook.PublisherName}} <br> {{selectedbook.Description}}
+        <p class="title">{{selectedbook.Name}}</p>
+        <br> {{selectedbook.Description}}
     </div>
 
 </ng-template>

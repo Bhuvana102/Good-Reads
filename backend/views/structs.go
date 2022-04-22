@@ -49,11 +49,19 @@ type Ratings struct {
 
 type User struct {
 	ID        uint   `gorm:"primarykey"`
-	FirstName string `gorm:"firstname"`
+	FirstName string `json:"firstname"`
 	LastName  string `json:"lastname"`
 	Username  string `json:"username"`
 	Password  string `json:"password"`
 	Email     string `json:"email"`
 	CreatedAt time.Time
 	UpdatedAt time.Time
+}
+
+type User_Auth struct {
+	ID       uint   `json:"ID"`
+	Username string `json:"username"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
+	Status   bool   `json:"status"`
 }
