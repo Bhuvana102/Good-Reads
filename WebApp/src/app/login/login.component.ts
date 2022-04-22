@@ -88,8 +88,8 @@ export class LoginComponent implements OnInit {
       console.log(this.rcpassword);
       this.api.signUpUser(this.buildPostData()).subscribe((data)=>{
         console.log(data);
-        this.snackBar.open("User Registered Successfully",'',{duration:1000})
-        this.router.navigate(['/home']);
+        this.snackBar.open("User Registered Successfully! Please Login",'',{duration:2000})
+        location.reload();
       })
     }
   }
