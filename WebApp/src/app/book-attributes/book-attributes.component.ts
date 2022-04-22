@@ -21,7 +21,7 @@ export class BookAttributesComponent implements OnInit {
   selectedbook: any;
   // ratingData!: IndividualRatings;
   constructor(private api: ApiService, private route: ActivatedRoute, public global: GlobalService,
-    private router: Router) {
+    private router: Router, private snack: MatSnackBar) {
     this.bookId = this.route.snapshot.params.id;
     this.api.getIndividualRating(this.bookId).subscribe((rateData: IndividualRatings) => {
       this.global.glbRating = rateData;
@@ -40,10 +40,13 @@ export class BookAttributesComponent implements OnInit {
     if (mybooks) {
       if (mybooks.findIndex(x => x.ID === selectedbook.ID) < 0) {
         mybooks.push(selectedbook);
+
       }
+      this.snack.open('Book Added Successfully', '', { duration: 2000 })
     } else {
       mybooks = [];
       mybooks.push(selectedbook);
+      this.snack.open('Book Added Successfully', '', { duration: 2000 })
     }
     sessionStorage.setItem("mybooks", JSON.stringify(mybooks));
   }
