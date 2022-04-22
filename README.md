@@ -54,6 +54,7 @@ https://user-images.githubusercontent.com/41356950/164796923-5005a9c7-004c-4730-
 # Backend Testing Demo
 
 # Backend API Documentation
+https://github.com/Bhuvana102/Good-Reads/wiki/API
 
 # Project Sprint Boards
 > Sprint 1 - https://github.com/Bhuvana102/Good-Reads/projects/2
