@@ -29,6 +29,8 @@ For this project, we will be creating a web application for all the bibliophiles
      
   ## Demo Video 
   
+  
+  
      
 
 https://user-images.githubusercontent.com/41356950/164796162-a00a5963-1b95-4dd6-8ccf-ee1cbe341917.mp4
@@ -36,7 +38,18 @@ https://user-images.githubusercontent.com/41356950/164796162-a00a5963-1b95-4dd6-
 
 
 
+
+
 # Front End Testing Demo - Cypress
+
+
+
+
+https://user-images.githubusercontent.com/41356950/164796923-5005a9c7-004c-4730-840c-f9e56872509b.mp4
+
+
+
+
 
 # Backend Testing Demo
 
