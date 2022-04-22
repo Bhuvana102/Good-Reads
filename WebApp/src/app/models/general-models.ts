@@ -44,3 +44,11 @@ export interface ReviewModal{
     Review: string;
     Reviewed_Date: string;
 }
+
+export interface LoginModal{
+    ID: number;
+    username: string;
+    email: string;
+    password: string;
+    status: Boolean;
+}

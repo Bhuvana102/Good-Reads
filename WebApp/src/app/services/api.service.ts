@@ -5,6 +5,7 @@ import {
   GenreDetailsModel,
   GenreModel,
   IndividualRatings,
+  LoginModal,
   ReviewModal,
   ReviewPostData,
 } from '../models/general-models';
@@ -46,5 +47,10 @@ export class ApiService {
       'http://localhost:8080/api/signUp',
       userData
     );
+  }
+
+  loginAuth(loginData: any): Observable<LoginModal[]>{
+    return this.http.post<LoginModal[]>('http://localhost:8080/api/login',
+    loginData)
   }
 }
