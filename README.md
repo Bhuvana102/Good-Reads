@@ -4,6 +4,15 @@ For this project, we will be creating a web application for all the bibliophiles
 # Goal
   To create an application for users to view information related to books including author, publisher, plot summaries and critical reviews. Users can also review, rate and comment their views over corresponding book.
 
+# Project Boards
+> Sprint 1 - https://github.com/Bhuvana102/Good-Reads/projects/2
+
+> Sprint 2 - https://github.com/Bhuvana102/Good-Reads/projects/3
+
+> Sprint 3 - https://github.com/Bhuvana102/Good-Reads/projects/4
+
+> Sprint 4 - https://github.com/Bhuvana102/Good-Reads/projects/5
+
 # Team
 ## Front-End
   1. Manish Kumar Reddy Gangula
