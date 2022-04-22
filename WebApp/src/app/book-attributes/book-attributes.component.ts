@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GenreDetailsModel, IndividualRatings } from '../models/general-models';
 import { ApiService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -31,7 +32,7 @@ export class BookAttributesComponent implements OnInit {
     this.api.getGenreDetails(String(localStorage.getItem('genreId'))).subscribe((bookData: GenreDetailsModel[]) => {
       this.global.preGenreBooks = bookData;
       this.selectedbook = this.global.preGenreBooks.filter(x => x.ID == this.bookId)[0];
-      localStorage.setItem('averageRating',this.selectedbook.AvgRating);
+      localStorage.setItem('averageRating', this.selectedbook.AvgRating);
     })
   }
   AddToMyBooks(selectedbook: any) {
@@ -54,7 +55,7 @@ export class BookAttributesComponent implements OnInit {
       return 'star_border';
     }
   }
-  getAverageRating(){
+  getAverageRating() {
     return Number(localStorage.getItem('averageRating'));
   }
 }
