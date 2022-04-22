@@ -1,6 +1,8 @@
+import { TOUCH_BUFFER_MS } from '@angular/cdk/a11y/input-modality/input-modality-detector';
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'login',
@@ -22,9 +24,11 @@ export class LoginComponent implements OnInit {
   rcpassword:string='';
   rFirstName: string = '';
   rLastName:string='';
+  rUserName: string ='';
   emailRegex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
   passwordRegex = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
-  constructor(private router: Router, private snackBar:MatSnackBar) { 
+  constructor(private router: Router, private snackBar:MatSnackBar,
+              private api: ApiService) { 
   }
 
   ngOnInit(): void {
@@ -59,8 +63,11 @@ export class LoginComponent implements OnInit {
     else if(!this.passwordRegex.test(this.rcpassword)){
       this.snackBar.open("Enter Valid Confirm Password",'',{duration:1000})
     }
+    else if(this.rpassword !== this.rcpassword){
+      this.snackBar.open("Password Doesnot Match",'',{duration:1000})
+    }
     else{
-      return true
+      return true;
     }
   }
 
@@ -73,14 +80,36 @@ export class LoginComponent implements OnInit {
     else if(!this.onPasswordFocusOut(this.rpassword)) return
     else if(!this.onConfPasswordFocusOut()) return
     else {
-      console.log(btoa(this.rpassword));
+      console.log(this.rpassword);
+      console.log(this.rcpassword);
+      this.rpassword = btoa(this.rpassword);
+      this.rcpassword = btoa(this.rcpassword);
+      console.log(this.rpassword);
+      console.log(this.rcpassword);
+      this.api.signUpUser(this.buildPostData()).subscribe((data)=>{
+        console.log(data);
+        this.snackBar.open("User Registered Successfully",'',{duration:1000})
+        this.router.navigate(['/home']);
+      })
     }
+  }
+
+  buildPostData(){
+    const userData = {
+        username : this.rUserName,
+        FirstName : this.rFirstName,
+        lastname : this.rLastName,
+        password : this.rpassword,
+        email : this.remail
+    }
+    return userData;
   }
   login() {
     if(this.email=="admin" && this.password=="admin"){
         this.snackBar.open('Login Successful','',{duration:2000})
         this.router.navigate(['/home']);
-    }else{
+    }
+    else{
       if(this.email==='' && this.password ===''){
         this.snackBar.open('Please enter Credentials to continue','',{duration:2000})
       }

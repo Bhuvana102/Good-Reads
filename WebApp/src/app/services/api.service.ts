@@ -40,4 +40,11 @@ export class ApiService {
       reviewData, {observe:'response'}
     );
   }
+
+  signUpUser(userData: any){
+    return this.http.post<any>(
+      'http://localhost:8080/api/signUp',
+      userData, {observe:'response'}
+    );
+  }
 }
