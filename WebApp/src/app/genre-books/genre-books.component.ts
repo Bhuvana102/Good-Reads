@@ -12,7 +12,7 @@ import { GenreDetailsModel } from '../models/general-models';
 export class GenreBooksComponent implements OnInit {
   books: GenreDetailsModel[] = [];
   constructor(private api: ApiService, private route: ActivatedRoute, public global: GlobalService,
-              private router:Router) { 
+    private router: Router) {
 
   }
   description = "";
@@ -25,8 +25,8 @@ export class GenreBooksComponent implements OnInit {
   showDescription(name: string) {
     this.selectedbook = this.global.preGenreBooks.filter(x => x.Name == name)[0];
   }
-  goToBookDetails(bookID: number){
-    this.router.navigate(['/book-details/'+ String(bookID)])
+  goToBookDetails(bookID: number) {
+    this.router.navigate(['/book-details/' + String(bookID)])
   }
 }
 

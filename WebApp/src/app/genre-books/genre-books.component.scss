@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     border: 2px solid rgb(160, 136, 136);
     display: flex;
     flex-direction: row;
@@ -8,38 +8,46 @@
     padding: 15px 15px;
     width: fit-content;
 }
-img{
+
+img {
     max-width: 250px;
     max-height: 300px;
     border: 2px solid transparent;
     border-radius: 20px;
 }
+
 .bookDesc {
     height: 280px;
     width: 220px;
-    background-color: gray;
+    background-color: rgb(255, 254, 254);
     border-radius: 20px;
+    color: black;
 }
-.selected{
+
+.selected {
     transform: scale(1.1);
     border: 2px solid green;
     border-radius: 20px;
 }
-.maindiv{
+
+.maindiv {
     background-image: linear-gradient(rgba(139, 131, 131, 0.164), rgba(26, 25, 25, 0.705)), url(/assets/images/bck.jpg);
 }
-.maindiv>h3{
+
+.maindiv>h3 {
     font-size: 30px;
     font-weight: bold;
 }
 
-.maindiv>p{
+.maindiv>p {
     font-size: 18px;
 }
 
-
-.maindiv>h4{
-    font-size: 14px;
+.title {
     font-weight: bold;
 }
 
+.maindiv>h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
