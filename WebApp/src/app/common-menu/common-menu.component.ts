@@ -17,6 +17,7 @@ export class CommonMenuComponent implements OnInit {
     public global: GlobalService, private snackbar: MatSnackBar) { }
   public genres: GenreModel[] = [];
   opened: boolean = false;
+  username = localStorage.getItem('username');
   ngOnInit(): void {
     this.api.getGenres().subscribe((data: GenreModel[]) => {
       this.genres = data;

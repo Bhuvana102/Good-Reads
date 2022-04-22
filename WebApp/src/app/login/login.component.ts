@@ -72,9 +72,9 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  doLogin(){
-    this.router.navigate(['/home']);
-  }
+  // doLogin(){
+  //   this.router.navigate(['/home']);
+  // }
 
   register() {
     if(!this.onEmailFocusOut(this.remail)) return
@@ -110,28 +110,23 @@ export class LoginComponent implements OnInit {
       email: this.email,
       password: btoa(this.password)
     }
-    this.api.loginAuth(loginData).subscribe((data: LoginModal[])=>{
+    this.api.loginAuth(loginData).subscribe((data: LoginModal)=>{
       console.log(data);
+      if(data.ID === 0) {
+        this.snackBar.open("Invalid User! Register for first users",'',{duration:2000})
+        return
+      }
+      else if(!data.status){
+        this.snackBar.open("Invalid Password!",'',{duration:2000})
+        return
+      }
+      else{
+        localStorage.setItem('username',data.username);
+        localStorage.setItem('userId',String(data.ID));
+        this.router.navigate(['/home']);
+      }
     },(error)=>{
       console.error('error caught in component' + JSON.parse(error));
     })
-    // if(this.email=="admin" && this.password=="admin"){
-    //     this.snackBar.open('Login Successful','',{duration:2000})
-    //     this.router.navigate(['/home']);
-    // }
-    // else{
-    //   if(this.email==='' && this.password ===''){
-    //     this.snackBar.open('Please enter Credentials to continue','',{duration:2000})
-    //   }
-    //   else if(this.email===''){
-    //     this.snackBar.open('Please enter Login Id','',{duration:2000})
-    //   }
-    //   else if(this.password===''){
-    //     this.snackBar.open('Please enter a password','',{duration:2000})
-    //   }
-    //   else{
-    //     this.snackBar.open('Invalid Login Id or Password','',{duration:2000})
-    //   }
-    // }
   }
 }

@@ -8,6 +8,7 @@ import {
   LoginModal,
   ReviewModal,
   ReviewPostData,
+  TopBooksModel,
 } from '../models/general-models';
 
 @Injectable({
@@ -49,8 +50,12 @@ export class ApiService {
     );
   }
 
-  loginAuth(loginData: any): Observable<LoginModal[]>{
-    return this.http.post<LoginModal[]>('http://localhost:8080/api/login',
+  loginAuth(loginData: any): Observable<LoginModal>{
+    return this.http.post<LoginModal>('http://localhost:8080/api/login',
     loginData)
+  }
+
+  getTopBooks(bookId: number): Observable<TopBooksModel[]>{
+    return this.http.get<TopBooksModel[]>('http://localhost:8080/api/fetchTopBooksForGenre?id='+bookId);
   }
 }

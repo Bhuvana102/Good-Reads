@@ -1,6 +1,6 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GenreDetailsModel, IndividualRatings } from '../models/general-models';
+import { GenreDetailsModel, IndividualRatings, TopBooksModel } from '../models/general-models';
 import { ApiService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -33,6 +33,13 @@ export class BookAttributesComponent implements OnInit {
       this.global.preGenreBooks = bookData;
       this.selectedbook = this.global.preGenreBooks.filter(x => x.ID == this.bookId)[0];
       localStorage.setItem('averageRating', this.selectedbook.AvgRating);
+      this.getTopBooks();
+    })
+  }
+
+  getTopBooks(){
+    this.api.getTopBooks(Number(localStorage.getItem('genreId'))).subscribe((topBooks: TopBooksModel[])=>{
+      console.log(topBooks);
     })
   }
   AddToMyBooks(selectedbook: any) {
