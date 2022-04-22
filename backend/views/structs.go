@@ -65,3 +65,9 @@ type User_Auth struct {
 	Password string `json:"password"`
 	Status   bool   `json:"status"`
 }
+
+type Wishlist struct {
+	UserId     int    `json:"userId"`
+	BookId     int    `json:"BookId"`
+	MyBooksIds string `json:"mybooksids"`
+}

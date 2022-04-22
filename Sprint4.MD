@@ -35,7 +35,7 @@ First the localhost:4200 will start upon ng serve and then a new tab for cypress
 
 
 
-# Sprint 2 Demo Run
+# Sprint 4 Demo Run
 
 Run Backend :
 Main :
@@ -56,8 +56,10 @@ Run BackEndTestSrcipts : `go test -v`
 API :: 
 The below API's are used to fetch the details from database and return it to the calling API so that data in FRONTEND can be rendered based on the data stored in BACKEND
 1. API to Fetch the Top 5 books for a Given Genre
-2.
-3.. Unit Test Cases for APIs
+2. API to Register User
+3. API to authenticate a user login
+4. API to add a book to users wishlists
+5.. Unit Test Cases for APIs
 
 
 The Postman commands and sample examples can be viewed here :
@@ -74,7 +76,23 @@ http://localhost:8080/api/fetchTopBooksForGenre?id=5
 ![Postman 2022-04-20 21-37-43](https://user-images.githubusercontent.com/97717233/164355061-94613c3e-c498-4f31-9670-fe8e87ad50ec.gif)
 
 
-## 2. API to post book reviews
+## 2. API to Register User
+This API is to register a new user account.
+
+Sample API usage and output
+http://localhost:8080/api/signUp
+
+![image](https://user-images.githubusercontent.com/61014960/164603971-74292291-a612-446b-9b33-ee99934b0977.png)
+
+## 3. API to authenticate User login
+
+This api will authenticate users email and password and return a json body that contains the status(true / false).
+
+Sample API usage and output
+http://localhost:8080/api/login
+
+![image](https://user-images.githubusercontent.com/61014960/164604362-c1e1462c-a002-4592-b14d-be2a20b0669b.png)
+
 
 
 ## 3. Unit Test Cases for APIs
