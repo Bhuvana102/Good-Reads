@@ -2,6 +2,7 @@ import { TOUCH_BUFFER_MS } from '@angular/cdk/a11y/input-modality/input-modality
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { LoginModal } from '../models/general-models';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -105,6 +106,13 @@ export class LoginComponent implements OnInit {
     return userData;
   }
   login() {
+    // const loginData = {
+    //   email: this.email,
+    //   password: btoa(this.password)
+    // }
+    // this.api.loginAuth(loginData).subscribe((data: LoginModal[])=>{
+    //   console.log(data);
+    // })
     if(this.email=="admin" && this.password=="admin"){
         this.snackBar.open('Login Successful','',{duration:2000})
         this.router.navigate(['/home']);
