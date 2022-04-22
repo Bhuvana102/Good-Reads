@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { GenreBooksComponent } from './genre-books/genre-books.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MyBooksComponent } from './my-books/my-books.component';
+
+
 import { BookDetailsComponent } from './book-details/book-details.component';
 
 const routes: Routes = [
@@ -18,12 +20,12 @@ const routes: Routes = [
   {
     path: '',
     children: [
-      { path: 'login', component: LoginComponent},
-      { path: 'home', component: HomepageComponent},
-      { path: 'community', component: CommunityComponent},
-      { path:'genre/:id',component:GenreBooksComponent},
-      { path:'myBooks',component:MyBooksComponent},
-      { path: 'book-details/:id', component: BookDetailsComponent}
+      { path: 'login', component: LoginComponent },
+      { path: 'home', component: HomepageComponent },
+      { path: 'community', component: CommunityComponent },
+      { path: 'genre/:id', component: GenreBooksComponent },
+      { path: 'myBooks', component: MyBooksComponent },
+      { path: 'book-details/:id', component: BookDetailsComponent }
     ]
   }
 ];
