@@ -7,16 +7,16 @@ import { CommonMenuComponent } from './common-menu/common-menu.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
-import {MatMenuModule} from '@angular/material/menu'
-import {MatToolbarModule} from '@angular/material/toolbar'
-import {MatIconModule} from '@angular/material/icon'
-import {MatSidenavModule} from '@angular/material/sidenav'
-import {MatButtonModule} from '@angular/material/button'
-import {MatDividerModule} from '@angular/material/divider'
-import {MatTreeModule} from '@angular/material/tree'
+import { MatMenuModule } from '@angular/material/menu'
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatIconModule } from '@angular/material/icon'
+import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatButtonModule } from '@angular/material/button'
+import { MatDividerModule } from '@angular/material/divider'
+import { MatTreeModule } from '@angular/material/tree'
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list'
 import { MatTabsModule } from '@angular/material/tabs';
@@ -27,14 +27,14 @@ import { GenreBooksComponent } from './genre-books/genre-books.component';
 import { MyBooksComponent } from './my-books/my-books.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { BookAttributesComponent } from './book-attributes/book-attributes.component';
 import { BookReviewsComponent } from './book-reviews/book-reviews.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { MatExpansionModule } from '@angular/material/expansion'
 import { MatGridListModule } from '@angular/material/grid-list'
 
- @NgModule({
+@NgModule({
   declarations: [
     AppComponent,
     CommonMenuComponent,
@@ -74,7 +74,7 @@ import { MatGridListModule } from '@angular/material/grid-list'
     MatExpansionModule,
     MatGridListModule,
   ],
-  exports: [ MatNativeDateModule,
+  exports: [MatNativeDateModule,
     MatInputModule,
     MatSliderModule,
     MatMenuModule,
