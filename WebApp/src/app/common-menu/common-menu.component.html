@@ -1,7 +1,7 @@
 <head>
 </head>
 <mat-toolbar>
-    <mat-icon style='padding-right: 10px;'>auto_stories</mat-icon>
+    <mat-icon style='padding-right: 50px;'>auto_stories</mat-icon>
     <span>Good Reads</span>
     <button mat-icon-button id="side-menu" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()"
         class='side-menu-icon' autosize="true">
@@ -12,6 +12,7 @@
 
 <mat-sidenav-container>
     <mat-sidenav #drawer #sidenav="matSidenav" [(opened)]="opened" position='end' [fixedInViewport]="false">
+        <label class="menu-items" style="justify-content: center;">{{username}}</label>
         <button mat-button class="menu-items" (click)="goToHome()" (mouseleave)="menuTrigger.closeMenu()">
             <mat-icon>home</mat-icon>
             <span>Home</span>

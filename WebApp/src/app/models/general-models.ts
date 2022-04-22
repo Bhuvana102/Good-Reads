@@ -52,3 +52,19 @@ export interface LoginModal{
     password: string;
     status: Boolean;
 }
+
+export interface TopBooksModel {
+  ID:            number;
+  Name:          string;
+  Description:   string;
+  AuthorName:    string;
+  GenreId:       number;
+  PublisherName: string;
+  ImageName:     string;
+  PublishedYear: string;
+  AvgRating:     number;
+  NoOfRatings:   number;
+  NoOfReviews:   number;
+  CreatedAt:     Date;
+  UpdatedAt:     Date;
+}
