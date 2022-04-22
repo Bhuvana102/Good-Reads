@@ -19,7 +19,6 @@ func RegisterUserHandler() http.HandlerFunc {
 				return
 			}
 			w.WriteHeader(http.StatusCreated)
-			w.Write([]byte("Data inserted to DB successfully"))
 			json.NewEncoder(w).Encode(data)
 		}
 	}
