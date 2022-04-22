@@ -13,6 +13,16 @@ For this project, we will be creating a web application for all the bibliophiles
 
 > Sprint 4 - https://github.com/Bhuvana102/Good-Reads/projects/5
 
+
+# Sprint 4 Deliverables
+  Tasks achieved as part of Sprint 4 can be viewed in the following dashboard
+  > https://github.com/Bhuvana102/Good-Reads/projects/5
+  
+  Walkthrough for the same is documented at https://github.com/Bhuvana102/Good-Reads/edit/main/Sprint4.MD
+
+# Backend API Documentation
+
+
 # Team
 ## Front-End
   1. Manish Kumar Reddy Gangula
@@ -43,6 +53,10 @@ ng serve
 cd ../backend
 go run main.go 
 Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+# Application Demo
+
+# Front End Testing Demo - Cypress
 
 
 
