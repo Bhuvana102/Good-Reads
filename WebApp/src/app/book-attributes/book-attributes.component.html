@@ -17,45 +17,20 @@
         </button>
       </div>
     </div>
-  </div>
-  <!-- <div>
-    <div class="rating">
-      <div class="rate-title">4 Stars</div>
-      <div style="display: inline-block; margin-left: 15px;">
-        <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
-          <mat-icon> {{ markStar(this.global.glbRating.four_stars,i) }} </mat-icon>
-        </button>
+    <div>
+      <label style="font-weight: bold;">Top Rated Books</label>
+      <div *ngFor="let book of this.topBooksData" style="align-items: flex-end;">
+      <img [src]="'/assets/images/'+book.ImageName+'.jpg'" [alt]="book.Name+' not found ' " [ngbTooltip]="tooltip"
+        (mouseover)="showDescription(book.Name)" id="{{book.ImageName}}"
+        [class.selected]="selectedTopbook?.Name===book.Name" (click)="goToBookDetails(book.ID)" style="max-width: 100px;">
       </div>
-    </div>
+    </div>  
   </div>
-  <div>
-    <div class="rating">
-      <div class="rate-title">3 Stars</div>
-      <div style="display: inline-block; margin-left: 15px;">
-        <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
-          <mat-icon> {{ markStar(this.global.glbRating.three_stars,i) }} </mat-icon>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div class="rating">
-      <div class="rate-title">2 Stars</div>
-      <div style="display: inline-block; margin-left: 15px;">
-        <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
-          <mat-icon> {{ markStar(this.global.glbRating.two_stars,i) }} </mat-icon>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div class="rating">
-      <div class="rate-title">1 Stars</div>
-      <div style="display: inline-block; margin-left: 15px;">
-        <button mat-icon-button color="accent" *ngFor="let r of [].constructor(5); index as i">
-          <mat-icon> {{ markStar(this.global.glbRating.one_stars,i) }} </mat-icon>
-        </button>
-      </div>
-    </div>
-  </div> -->
 </div>
+
+<ng-template #tooltip>
+  <div class="bookDesc">
+      <p class="title">{{selectedTopbook.Name}}</p>
+      <br> {{selectedTopbook.Description}}
+  </div>
+</ng-template>

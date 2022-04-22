@@ -1,5 +1,5 @@
 import { Component, Injectable, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { GenreDetailsModel, IndividualRatings, TopBooksModel } from '../models/general-models';
 import { ApiService } from '../services/api.service';
 import { GlobalService } from '../services/global.service';
@@ -19,6 +19,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class BookAttributesComponent implements OnInit {
   bookId: any;
   selectedbook: any;
+  selectedTopbook: any;
+  topBooksData: TopBooksModel[]=[]
   // ratingData!: IndividualRatings;
   constructor(private api: ApiService, private route: ActivatedRoute, public global: GlobalService,
     private router: Router, private snack: MatSnackBar) {
@@ -39,7 +41,8 @@ export class BookAttributesComponent implements OnInit {
 
   getTopBooks(){
     this.api.getTopBooks(Number(localStorage.getItem('genreId'))).subscribe((topBooks: TopBooksModel[])=>{
-      console.log(topBooks);
+      // console.log(topBooks);
+      this.topBooksData = topBooks;
     })
   }
   AddToMyBooks(selectedbook: any) {
@@ -65,6 +68,15 @@ export class BookAttributesComponent implements OnInit {
       return 'star_border';
     }
   }
+
+  showDescription(name: string) {
+    this.selectedTopbook = this.global.preGenreBooks.filter(x => x.Name == name)[0];
+  }
+  goToBookDetails(bookID: number) {
+    this.router.navigateByUrl('/book-details/' + String(bookID))
+    // location.reload();
+  }
+
   getAverageRating() {
     return Number(localStorage.getItem('averageRating'));
   }
