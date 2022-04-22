@@ -30,5 +30,7 @@ func Starter() *mux.Router {
 	subRoute.HandleFunc("/signUp", RegisterUserHandler()).Methods(http.MethodPost, http.MethodOptions)
 
 	subRoute.HandleFunc("/login", AuthenticateUserHandler()).Methods(http.MethodPost, http.MethodOptions)
+
+	subRoute.HandleFunc("/addMyBooks", AddMyBooksHandler()).Methods(http.MethodPost, http.MethodOptions)
 	return subRoute
 }
