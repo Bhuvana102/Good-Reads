@@ -150,6 +150,13 @@ Sample Demo:
 
 
 ## 5.Cypress
+Added cypress test case for the mybooks page.
+
+Sample Demo:
+
+https://user-images.githubusercontent.com/92141914/164872721-7378e095-754f-41b2-8579-1d30f9ad4ce5.mp4
+
+
 
 
 
