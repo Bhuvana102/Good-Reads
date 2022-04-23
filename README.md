@@ -11,6 +11,7 @@ For this project, we will be creating a web application for all the bibliophiles
       3. NodeJs 
       4. Typescript
       5. Golang
+      6. Sqlite3
 
   ## Tools used
      This project was generated with Angular Material for FrontEnd and Golang for backend
@@ -51,7 +52,10 @@ https://user-images.githubusercontent.com/41356950/164796923-5005a9c7-004c-4730-
 
 
 
-# Backend Testing Demo
+# Backend API Testing
+
+![image](https://user-images.githubusercontent.com/61014960/164861951-2f3a0a5d-41c2-46c6-b27d-20e2cb020bea.png)
+
 
 # Backend API Documentation
 https://github.com/Bhuvana102/Good-Reads/wiki/API
