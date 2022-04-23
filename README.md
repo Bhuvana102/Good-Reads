@@ -1,5 +1,5 @@
 # Good-Reads
-For this project, we will be creating a web application for all the bibliophiles out there, that concentrates on implementing certain features available in the site GoodReads like login, reviewing books, adding books and categorizing books.
+For this project, we will be creating a web application for all the bibliophiles out there, that concentrates on implementing certain features available in the site GoodReads like login, reviewing books, adding books and categorizing books.We will also let users have the option to add books they haven't read yet to their wishlist. 
 
 # Goal
   To create an application for users to view information related to books including author, publisher, plot summaries and critical reviews. Users can also review, rate and comment their views over corresponding book.
